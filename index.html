@@ -1,0 +1,804 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Agota - eCommerce HTML5 Template</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+    <link
+      rel="shortcut icon"
+      href="images/icon/favicons.png"
+      type="image/x-icon"
+    />
+
+    <!-- All css here -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="static/css/slick.css" />
+
+    <link rel="stylesheet" href="static/css/nice-select.css" />
+    <link rel="stylesheet" href="static/css/animate.css" />
+    <link rel="stylesheet" href="static/css/meanmenu.css" />
+    <link rel="stylesheet" href="static/css/flaticon.css" />
+    <link rel="stylesheet" href="static/css/icomoon.css" />
+    <link rel="stylesheet" href="static/css/default.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="static/css/style-2.css" />
+    <link rel="stylesheet" href="static/css/responsive.css" />
+  </head>
+  <body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+    <!--  ====== preloader=============================================  -->
+    <div id="preloader"></div>
+
+    <!--  ====== header-area-start=======================================  -->
+    <header>
+      <div id="header-sticky" class="header-area">
+        <div class="header position-absolute pl-35 pr-35">
+          <div class="container-fluid">
+            <div class="row align-items-center justify-content-lg-between">
+              <div class="col-xl-3 col-lg-7 col-md-7 col-sm-7 col-8">
+                <div class="logo float-right float-xl-left">
+                  <a href="index.html"
+                    ><img src="static/picture/logo.svg" alt="Agota"
+                  /></a>
+                </div>
+                <div class="d-block d-xl-none">
+                  <a class="mobile-menubar" href="javascript:void(0);"
+                    ><i class="fas fa-bars"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- /col -->
+              <div
+                class="col-xl-6 col-lg-1 col-md-1 col-sm-1 col-1 d-none d-lg-flex align-items-lg-center justify-content-lg-center position-static"
+              >
+                <div class="main-menu">
+                  <nav id="mobile-menu">
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="shop.html">Shop</a></li>
+                      <li><a href="single-product.html">Simple Product</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <!-- /main-menu -->
+              </div>
+              <!-- /col -->
+              <div class="col-xl-3 col-lg-4 col-md-5 col-sm-5 col-4">
+                <div class="header-right d-flex justify-content-end">
+                  <!-- <ul class="header-login d-none d-xl-block">
+                                        <li><a href="#" data-toggle="tooltip" data-selector="true" data-placement="bottom" title="Login / Register">Login / register</a></li>
+                                    </ul> -->
+                  <ul class="header-search d-none d-xl-block">
+                    <li>
+                      <a href="javascript:void(0);"
+                        ><span class="icon-search"></span
+                      ></a>
+                    </li>
+                  </ul>
+                  <!-- <ul class="header-heart d-none d-xl-block">
+                    <li>
+                      <a
+                        href="#"
+                        data-toggle="tooltip"
+                        data-selector="true"
+                        data-placement="bottom"
+                        title="View wishlist"
+                        ><span class="icon-heart"></span
+                        ><sup class="s-count">0</sup></a
+                      >
+                    </li>
+                  </ul> -->
+                  <!-- <ul>
+                    <li>
+                      <a class="header-shopping-cart" href="#"
+                        ><span class="icon-shopping-bag"></span
+                        ><sup class="s-count">0</sup></a
+                      >
+                    </li>
+                  </ul> -->
+                </div>
+                <!-- /header-right -->
+              </div>
+              <!-- /col -->
+            </div>
+            <!-- /row -->
+          </div>
+          <!-- /container -->
+        </div>
+      </div>
+      <!-- /header-bottom -->
+    </header>
+    <!--  header-area-end  -->
+
+    <!--  ====== header extra info start================================== -->
+    <!-- side-mobile-menu start -->
+    <div class="side-mobile-menu bg-white pt-30 pb-30 pl-30 pr-30">
+      <div class="close-icon float-right pt-10">
+        <a href="javascript:void(0);"><span class="icon-clear"></span></a>
+      </div>
+      <div class="header-search-content pt-110">
+        <h4 class="pb-10 text-center">Searching</h4>
+        <ul class="">
+          <li><a class="active" href="shop.html">All categories</a></li>
+          <li><a href="shop.html">Bedroom</a></li>
+          <li><a href="shop.html">Decor</a></li>
+          <li><a href="shop.html">Decoration</a></li>
+          <li><a href="shop.html">Kitchen</a></li>
+          <li><a href="shop.html">Lamp</a></li>
+        </ul>
+        <form action="#" class="position-relative pt-10 pb-15">
+          <input type="text" placeholder="Search Products..." />
+          <a class="position-absolute" href="javascript:void(0)"
+            ><span class="icon-search"></span
+          ></a>
+        </form>
+      </div>
+      <div class="mobile-menu"></div>
+      <div class="menu-login pt-50 pb-200">
+        <ul
+          class="header-login d-flex justify-content-between border-bottom-gray"
+        >
+          <li><a href="index.html">Login / register</a></li>
+          <li>
+            <a href="javascript:void(0)"><span class="icon-users"></span></a>
+          </li>
+        </ul>
+        <ul
+          class="header-heart d-flex justify-content-between border-bottom-gray"
+        >
+          <li><a href="javascript:void(0)">Wishlist</a></li>
+          <li>
+            <a href="#"><span class="icon-heart"></span></a>
+          </li>
+        </ul>
+      </div>
+      <!-- /header-right -->
+    </div>
+    <!-- /side-mobile-menu -->
+    <div class="body-overlay"></div>
+    <!-- header search details start -->
+    <div class="header-search-details text-center white-bg pt-60 pl-230 pr-230">
+      <div class="close-icon float-right">
+        <a href="javascript:void(0);"><span class="icon-clear"></span></a>
+      </div>
+      <div class="header-search-content pt-200 ml-150 mr-150">
+        <h4 class="mb-25">Searching</h4>
+        <ul class="d-flex justify-content-center">
+          <li><a class="active" href="shop.html">All categories</a></li>
+          <li><a href="shop.html">Bedroom</a></li>
+          <li><a href="shop.html">Decor</a></li>
+          <li><a href="shop.html">Decoration</a></li>
+          <li><a href="shop.html">Kitchen</a></li>
+          <li><a href="shop.html">Lamp</a></li>
+        </ul>
+        <form action="#" class="position-relative pt-10">
+          <input type="text" placeholder="Search Products..." />
+          <a class="position-absolute" href="#"
+            ><span class="icon-search"></span
+          ></a>
+        </form>
+      </div>
+    </div>
+    <!-- /extra-info -->
+
+    <main>
+      <!-- ======slider-area-start=========================================== -->
+      <div class="slider-area over-hidden">
+        <div class="slider-active">
+          <div
+            class="single-slider slider-height d-flex align-items-center"
+            data-background="static/images/slider1.jpg"
+          >
+            <div class="container">
+              <div class="row">
+                <div
+                  class="col-xl-12 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center position-static"
+                >
+                  <div class="slider-content">
+                    <span
+                      data-animation="fadeInLeft"
+                      data-delay=".7s"
+                      class="position-relative primary-color pl-60"
+                      >Featured Products</span
+                    >
+                    <h1
+                      data-animation="fadeInLeft"
+                      data-delay="1s"
+                      class="pt-70 pb-10"
+                    >
+                      Outset
+                    </h1>
+                    <p
+                      data-animation="fadeInLeft"
+                      data-delay="1.3s"
+                      class="text-white"
+                    >
+                      Form is designed by Agota Store and is part of the Form
+                      series. It is an <br />armless modern chair with great
+                      back support.
+                    </p>
+                    <a
+                      data-animation="fadeInLeft"
+                      data-delay="1.7s"
+                      href="#"
+                      class="btn mt-90"
+                      >Explore</a
+                    >
+                  </div>
+                </div>
+                <!-- /col -->
+              </div>
+              <!-- /row -->
+            </div>
+            <!-- /container -->
+          </div>
+          <!-- /single-slider -->
+          <div
+            class="single-slider slider-height d-flex align-items-center"
+            data-background="static/images/slider2.jpg"
+          >
+            <div class="container">
+              <div class="row">
+                <div
+                  class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center position-static"
+                >
+                  <div class="slider-content pl-35">
+                    <span
+                      data-animation="fadeInLeft"
+                      data-delay=".7s"
+                      class="position-relative primary-color pl-60"
+                      >Top Sale Of The Month</span
+                    >
+                    <h1
+                      data-animation="fadeInLeft"
+                      data-delay="1s"
+                      class="pt-70 pb-10"
+                    >
+                      Styles
+                    </h1>
+                    <p
+                      data-animation="fadeInLeft"
+                      data-delay="1.3s"
+                      class="text-white"
+                    >
+                      Form is designed by Agota Store and is part of the Form
+                      series. It is an <br />armless modern chair with great
+                      back support.
+                    </p>
+                    <a
+                      data-animation="fadeInLeft"
+                      data-delay="1.7s"
+                      href="#"
+                      class="btn mt-90"
+                      >Explore</a
+                    >
+                  </div>
+                </div>
+                <!-- /col -->
+              </div>
+              <!-- /row -->
+            </div>
+            <!-- /container -->
+          </div>
+          <!-- /single-slider -->
+          <div
+            class="single-slider slider-height d-flex align-items-center"
+            data-background="static/images/slider3.jpg"
+          >
+            <div class="container">
+              <div class="row">
+                <div
+                  class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center position-static"
+                >
+                  <div class="slider-content pl-35">
+                    <span
+                      data-animation="slideInDown"
+                      data-delay=".7s"
+                      class="position-relative primary-color pl-60"
+                      >Hot Deal Off The Day</span
+                    >
+                    <h1
+                      data-animation="slideInDown"
+                      data-delay="1s"
+                      data-animate-duration="5s"
+                      class="pt-70 pb-10"
+                    >
+                      Office
+                    </h1>
+                    <p
+                      data-animation="slideInDown"
+                      data-delay="1.3s"
+                      class="text-white"
+                    >
+                      Form is designed by Agota Store and is part of the Form
+                      series. It is an <br />armless modern chair with great
+                      back support.
+                    </p>
+                    <a
+                      data-animation="fadeInLeft"
+                      data-delay="1.7s"
+                      href="#"
+                      class="btn mt-90"
+                      >Explore</a
+                    >
+                  </div>
+                </div>
+                <!-- /col -->
+              </div>
+              <!-- /row -->
+            </div>
+            <!-- /container -->
+          </div>
+          <!-- /single-slider -->
+        </div>
+        <!-- /slider-active -->
+      </div>
+      <!-- slider-area-end=  -->
+
+      <section class="row contentRowPad">
+        <div class="container">
+          <div class="row sectionTitle">
+            <h3>this is D-shine</h3>
+            <h5>shop over our best brands</h5>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 product">
+              <div class="productInner row m0">
+                <div class="row m0 imgHov">
+                  <img src="images/product/5.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 product">
+              <div class="productInner row m0">
+                <div class="row m0 imgHov">
+                  <img src="images/product/6.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 product">
+              <div class="productInner row m0">
+                <div class="row m0 imgHov">
+                  <img src="images/product/7.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container blog_j">
+          <div class="row sectionTitle">
+            <h3>Blog Updates</h3>
+            <h5>we satisfied more than 700 customers</h5>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="blog_inner single">
+                <div class="blog_j_img">
+                  <img
+                    alt=""
+                    class="img-responsive"
+                    src="images/blog/blog6.png"
+                  />
+                  <div class="btn_readmore">
+                    <a href="blog.html">Read more</a>
+                  </div>
+                </div>
+                <div class="blog_j_text">
+                  <p>
+                    Discover our unriveled selection of must-have jewelry in
+                    timeless styles.
+                  </p>
+                  <span>December 2017 </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="blog_inner">
+                    <div class="blog_j_img">
+                      <img
+                        alt=""
+                        class="img-responsive"
+                        src="images/blog/blog1.png"
+                      />
+                      <div class="btn_readmore">
+                        <a href="blog.html">Read more</a>
+                      </div>
+                    </div>
+                    <div class="blog_j_text">
+                      <p>Discover our finely curated collection</p>
+                    </div>
+                  </div>
+                  <div class="blog_inner">
+                    <div class="blog_j_img">
+                      <img
+                        alt=""
+                        class="img-responsive"
+                        src="images/blog/blog5.png"
+                      />
+                      <div class="btn_readmore">
+                        <a href="blog.html">Read more</a>
+                      </div>
+                    </div>
+                    <div class="blog_j_text">
+                      <p>Discover our finely curated collection</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="blog_inner">
+                    <div class="blog_j_img">
+                      <img
+                        alt=""
+                        class="img-responsive"
+                        src="images/blog/blog7.png"
+                      />
+                      <div class="btn_readmore">
+                        <a href="blog.html">Read more</a>
+                      </div>
+                    </div>
+                    <div class="blog_j_text">
+                      <p>Discover our finely curated collection</p>
+                    </div>
+                  </div>
+                  <div class="blog_inner">
+                    <div class="blog_j_img">
+                      <img
+                        alt=""
+                        class="img-responsive"
+                        src="images/blog/blog3.png"
+                      />
+                      <div class="btn_readmore">
+                        <a href="blog.html">Read more</a>
+                      </div>
+                    </div>
+                    <div class="blog_j_text">
+                      <p>Discover our finely curated collection</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="featureProducts" class="row contentRowPad">
+        <div class="container">
+          <div class="row sectionTitle">
+            <h3>featured products</h3>
+            <h5>know more about our latest collection</h5>
+          </div>
+          <div class="row">
+            <div class="col-sm-3 product">
+              <div class="productInner row m0">
+                <div class="row m0 imgHov">
+                  <img src="images/product/1.png" alt="" />
+                  <div class="row m0 hovArea">
+                    <div class="row m0 icons">
+                      <ul class="list-inline"></ul>
+                    </div>
+                    <div class="row m0 proRating">
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="row m0 proName">
+                  <a href="single-product.html">Curabitur cursus dignis</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 product">
+              <div class="productInner row m0">
+                <div class="row m0 imgHov">
+                  <img src="images/product/2.png" alt="" />
+                  <div class="row m0 hovArea">
+                    <div class="row m0 icons">
+                      <ul class="list-inline"></ul>
+                    </div>
+                    <div class="row m0 proRating">
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="row m0 proName">
+                  <a href="single-product.html">Donec aliquam</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 product">
+              <div class="productInner row m0">
+                <div class="row m0 imgHov">
+                  <img src="images/product/3.png" alt="" />
+                  <div class="row m0 hovArea">
+                    <div class="row m0 icons">
+                      <ul class="list-inline"></ul>
+                    </div>
+                    <div class="row m0 proRating">
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="row m0 proName">
+                  <a href="single-product.html">Gravida est</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 product">
+              <div class="productInner row m0">
+                <div class="row m0 imgHov">
+                  <img src="images/product/4.png" alt="" />
+                  <div class="row m0 hovArea">
+                    <div class="row m0 icons">
+                      <ul class="list-inline"></ul>
+                    </div>
+                    <div class="row m0 proRating">
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                      <i class="fas fa-star-o"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="row m0 proName">
+                  <a href="single-product.html">Maximus quam posuere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="shopFeatures_new">
+        <div class="shopFeatures_new container">
+          <ul>
+            <li class="sf_first">
+              <img alt="" class="img-responsive" src="images/feature/1.jpg" />
+              <div class="sf_box">
+                <div class="sf_box_inner">
+                  <h2>free shipping</h2>
+                  <h3>on orders over $299</h3>
+                  <p>This offer is valid on all our store items</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ====== instagram-area-start ========================================= -->
+      <div class="instagram-img-area over-hidden">
+        <div class="row">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6 p-0">
+            <div class="instagram-img">
+              <img src="static/picture/instragram-img1.jpg" alt="" />
+            </div>
+          </div>
+          <!-- /col -->
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6 p-0">
+            <div class="instagram-img">
+              <img src="static/picture/instragram-img2.jpg" alt="" />
+            </div>
+          </div>
+          <!-- /col -->
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6 p-0">
+            <div class="instagram-img">
+              <img src="static/picture/instragram-img3.jpg" alt="" />
+            </div>
+          </div>
+          <!-- /col -->
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6 p-0">
+            <div class="instagram-img">
+              <img src="static/picture/instragram-img4.jpg" alt="" />
+            </div>
+          </div>
+          <!-- /col -->
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6 p-0">
+            <div class="instagram-img">
+              <img src="static/picture/instragram-img5.jpg" alt="" />
+            </div>
+          </div>
+          <!-- /col -->
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6 p-0">
+            <div class="instagram-img">
+              <img src="static/picture/instragram-img1.jpg" alt="" />
+            </div>
+          </div>
+          <!-- /col -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- instagram-area-end  -->
+    </main>
+
+    <!-- ====== footer-area-start ============================================ -->
+    <footer>
+      <div class="footer-area widget-area pt-100 dark-black-bg">
+        <div class="border-footer pb-35">
+          <div class="container-wrapper pl-15 pr-15">
+            <div class="row">
+              <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6">
+                <div class="footer-widget pb-30">
+                  <h4 class="text-uppercase text-white">Information</h4>
+                  <ul class="footer-info pt-35">
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="about-us.html">Customer Service</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="page-not-found.html">Page 404</a></li>
+                    <li><a href="about-us.html">Sizing Guide</a></li>
+                    <li><a href="about-us.html">FAQs</a></li>
+                    <li><a href="#">Contact us</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /col -->
+              <div
+                class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 d-flex justify-content-center"
+              >
+                <div class="footer-widget pb-30">
+                  <h4 class="text-uppercase text-white">Our Service</h4>
+                  <ul class="footer-info pt-35">
+                    <li><a href="about-us.html">Shipping Policy</a></li>
+                    <li><a href="about-us.html">Help & Contact Us</a></li>
+                    <li><a href="about-us.html">Returns & Refunds</a></li>
+                    <li><a href="about-us.html">Online Stores</a></li>
+                    <li><a href="about-us.html">Payment Method</a></li>
+                    <li><a href="about-us.html">Terms & Conditions</a></li>
+                    <li><a href="about-us.html">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /col -->
+              <div
+                class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-12 d-flex justify-content-end"
+              >
+                <div class="footer-widget pb-30">
+                  <h4 class="text-uppercase text-white">Payment & Shipping</h4>
+                  <ul class="footer-info pt-35">
+                    <li><a href="about-us.html">Terms Of Use</a></li>
+                    <li><a href="about-us.html">Payment Methods</a></li>
+                    <li><a href="about-us.html">Shipping Guide</a></li>
+                    <li><a href="about-us.html">Locations We Ship To</a></li>
+                    <li><a href="about-us.html">Estimated Delivery Time</a></li>
+                    <li><a href="about-us.html">Express</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /col -->
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="footer-widget subscriber-area pb-30 pl-100">
+                  <h4 class="text-uppercase text-white">
+                    Get Deals Of The Store
+                  </h4>
+                  <div class="footer-info pt-30">
+                    <p class="pb-15">
+                      Subscribe to the Agota Store mailing list to receive
+                      updates on new arrivals, special offers and other discount
+                      information.
+                    </p>
+                    <!-- <form action="#" class="d-flex justify-content-center">
+                      <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="Subscribe to our newsletter..."
+                      />
+                      <button type="submit" class="btn pl-30 border-white ml-2">
+                        Send
+                      </button>
+                    </form> -->
+                    <ul class="footer-address mt-25">
+                      <li>Email: admin@basictheme.com.</li>
+                      <li>
+                        Add: S9 Heaven Stress, Beverly Hill, Melbourne, USA.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- /col -->
+            </div>
+            <!-- /row -->
+          </div>
+          <!-- /container -->
+        </div>
+        <!-- /widget-area -->
+        <div class="copyright-area pt-50 pb-50">
+          <div class="container-wrapper pl-15 pr-15">
+            <div class="row align-items-center">
+              <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="row align-items-center">
+                  <div
+                    class="col-xl-5 col-lg-12 col-md-12 col-sm-12 col-12 pr-0"
+                  >
+                    <div class="copyright-text position-relative">
+                      <p>
+                        Copyright &copy; 2021.Company name All rights reserved.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /col -->
+                  <div
+                    class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12 pl-0"
+                  >
+                    <ul class="copyright-menu d-flex align-items-center">
+                      <li><a href="index.html">Site Map</a></li>
+                      <li><a href="index.html">Search Terms</a></li>
+                      <li><a href="index.html">Advanced Search</a></li>
+                      <li><a href="index.html">Contact us</a></li>
+                    </ul>
+                  </div>
+                  <!-- /col -->
+                </div>
+              </div>
+              <!-- /col -->
+              <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12">
+                <ul class="copyright-cart d-flex justify-content-end">
+                  <li>
+                    <a href="index.html"
+                      ><img src="static/picture/footer.png" alt=""
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /col -->
+            </div>
+            <!-- /row -->
+          </div>
+          <!-- /container -->
+        </div>
+        <!-- /copyright-area -->
+      </div>
+    </footer>
+
+    <!-- back top -->
+    <div class="position-relative">
+      <div class="top text-center border-gray2">
+        <span class="icon-chevrons-up"></span>
+      </div>
+    </div>
+
+    <!-- All js here -->
+    <script src="static/js/modernizr-3.5.0.min.js"></script>
+    <script src="static/js/jquery-1.12.4.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.inputarrow.js"></script>
+    <script src="static/js/jquery.nice-select.min.js"></script>
+    <script src="static/js/slick.min.js"></script>
+    <script src="static/js/isotope.pkgd.min.js"></script>
+    <script src="static/js/plugins.js"></script>
+    <script src="static/js/countdown.min.js"></script>
+    <script src="static/js/jquery.meanmenu.min.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

@@ -1342,7 +1342,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 -------------------------------------------------------------- */
 .footer-widget h4{
 	font-size: 20px;
-	font-weight: 900;
+	font-weight: 500;
 }
 .widget-area p,.widget-area li,.widget-area li a{
 	color: #999999;
@@ -1515,3 +1515,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	overflow: visible;
 	background: #fff url('../images/agota-preloader.gif') no-repeat center center;
   }
+
+input{
+	flex: 1;
+}

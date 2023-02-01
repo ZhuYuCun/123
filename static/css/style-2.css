@@ -3729,8 +3729,8 @@ h6 {
     font-family: 'PT Sans', sans-serif;;
     font-size: 15px;
     font-weight: 400;
-    line-height: 40px;
-    background: transparent;
+    line-height: 10px;
+    /* background: transparent; */
     padding: 0 35px;
     border-radius: 0;
     text-transform: uppercase;

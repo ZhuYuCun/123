@@ -354,7 +354,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	box-shadow: 0 8px 4px -7px rgba(115,115,115,0.1);
 }
 .header-area.sticky-menu,.header:hover {background: #fff;}
-.logo img {max-width: 100px;}
+.logo img {max-width: 45px;}
 .logo img {
 	filter: invert(1) sepia(1) hue-rotate(0deg) brightness(1.2);
 }
@@ -1341,7 +1341,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 /* 25. footer area
 -------------------------------------------------------------- */
 .footer-widget h4{
-	font-size: 13px;
+	font-size: 20px;
 	font-weight: 900;
 }
 .widget-area p,.widget-area li,.widget-area li a{

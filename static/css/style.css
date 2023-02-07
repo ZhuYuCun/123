@@ -1350,7 +1350,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	margin-bottom: 15px;
 	display: block;
 }
-.footer-widget p:hover,.footer-widget li:hover,.footer-widget li a:hover{color: #ffffff;}
+.footer-widget p:hover,.footer-widget li:hover,.footer-widget li a:hover{color: #000;}
 .footer-info form input {
 	width: 420px;
 	height: 55px;

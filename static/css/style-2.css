@@ -5631,11 +5631,7 @@ abbr[title] {
 }
 
 .shopFeatures_new ul li:hover img {
-    opacity: .8;
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1)
+   cursor: pointer;
 }
 
 .shopFeatures_new ul li .sf_box {

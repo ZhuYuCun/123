@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="static/css/default.css" />
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="static/css/style-2.css" />
+    <link rel="stylesheet" href="static/css/reset.css" />
     <link rel="stylesheet" href="static/css/responsive.css" />
   </head>
   <body>
@@ -36,7 +37,7 @@
 
     <!--  ====== header-area-start=======================================  -->
     <header>
-      <div id="header-sticky" class="header-area">
+      <div id="header-sticky" class="header-area sticky-menu">
         <div class="header position-absolute pl-35 pr-35">
           <div class="container-fluid">
             <div class="row align-items-center justify-content-lg-between">
@@ -95,12 +96,9 @@
       <div class="header-search-content pt-110">
         <h4 class="pb-10 text-center">Searching</h4>
         <ul class="">
-          <li><a class="active" href="sort.html">All categories</a></li>
-          <li><a href="sort.html">Bedroom</a></li>
-          <li><a href="sort.html">Decor</a></li>
-          <li><a href="sort.html">Decoration</a></li>
-          <li><a href="sort.html">Kitchen</a></li>
-          <li><a href="sort.html">Lamp</a></li>
+          <li><a class="active" href="sort.html">All</a></li>
+          <li><a href="sort.html">Ring Finger</a></li>
+          <li><a href="sort.html">Earring</a></li>
         </ul>
         <form action="#" class="position-relative pt-10 pb-15">
           <input type="text" placeholder="Search Products..." />
@@ -134,12 +132,9 @@
       <div class="header-search-content pt-200 ml-150 mr-150">
         <h4 class="mb-25">Searching</h4>
         <ul class="d-flex justify-content-center">
-          <li><a class="active" href="sort.html">All categories</a></li>
-          <li><a href="sort.html">Bedroom</a></li>
-          <li><a href="sort.html">Decor</a></li>
-          <li><a href="sort.html">Decoration</a></li>
-          <li><a href="sort.html">Kitchen</a></li>
-          <li><a href="sort.html">Lamp</a></li>
+          <li><a class="active" href="sort.html">All</a></li>
+          <li><a href="sort.html">Ring Finger</a></li>
+          <li><a href="sort.html">Earring</a></li>
         </ul>
         <form action="#" class="position-relative pt-10">
           <input type="text" placeholder="Search Products..." />
@@ -150,73 +145,15 @@
     <!-- /extra-info -->
 
     <main>
-      <!-- ======slider-area-start=========================================== -->
-      <div class="slider-area over-hidden">
-        <div class="slider-active">
-          <div class="single-slider slider-height d-flex align-items-center" data-background="static/images/slider1.jpg">
-            <div class="container">
-              <div class="row">
-                <div class="col-xl-12 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center position-static">
-                  <div class="slider-content">
-                    <span data-animation="fadeInLeft" data-delay=".7s" class="position-relative primary-color pl-60">Featured Products</span>
-                    <h1 data-animation="fadeInLeft" data-delay="1s" class="pt-70 pb-10">Outset</h1>
-                    <p data-animation="fadeInLeft" data-delay="1.3s" class="text-white">
-                      Form is designed by Agota Store and is part of the Form series. It is an <br />armless modern chair with great back support.
-                    </p>
-                    <a data-animation="fadeInLeft" data-delay="1.7s" href="#" class="btn mt-90">Explore</a>
-                  </div>
-                </div>
-                <!-- /col -->
-              </div>
-              <!-- /row -->
-            </div>
-            <!-- /container -->
-          </div>
-          <!-- /single-slider -->
-          <div class="single-slider slider-height d-flex align-items-center" data-background="static/images/slider2.jpg">
-            <div class="container">
-              <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center position-static">
-                  <div class="slider-content pl-35">
-                    <span data-animation="fadeInLeft" data-delay=".7s" class="position-relative primary-color pl-60">Top Sale Of The Month</span>
-                    <h1 data-animation="fadeInLeft" data-delay="1s" class="pt-70 pb-10">Styles</h1>
-                    <p data-animation="fadeInLeft" data-delay="1.3s" class="text-white">
-                      Form is designed by Agota Store and is part of the Form series. It is an <br />armless modern chair with great back support.
-                    </p>
-                    <a data-animation="fadeInLeft" data-delay="1.7s" href="#" class="btn mt-90">Explore</a>
-                  </div>
-                </div>
-                <!-- /col -->
-              </div>
-              <!-- /row -->
-            </div>
-            <!-- /container -->
-          </div>
-          <!-- /single-slider -->
-          <div class="single-slider slider-height d-flex align-items-center" data-background="static/images/slider3.jpg">
-            <div class="container">
-              <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center position-static">
-                  <div class="slider-content pl-35">
-                    <span data-animation="slideInDown" data-delay=".7s" class="position-relative primary-color pl-60">Hot Deal Off The Day</span>
-                    <h1 data-animation="slideInDown" data-delay="1s" data-animate-duration="5s" class="pt-70 pb-10">Office</h1>
-                    <p data-animation="slideInDown" data-delay="1.3s" class="text-white">
-                      Form is designed by Agota Store and is part of the Form series. It is an <br />armless modern chair with great back support.
-                    </p>
-                    <a data-animation="fadeInLeft" data-delay="1.7s" href="#" class="btn mt-90">Explore</a>
-                  </div>
-                </div>
-                <!-- /col -->
-              </div>
-              <!-- /row -->
-            </div>
-            <!-- /container -->
-          </div>
-          <!-- /single-slider -->
+      <section>
+        <div class="shopFeatures_new container">
+          <ul>
+            <li class="sf_first" style="border: none">
+              <img alt="" class="img-responsive" src="static/imgs/header.png" />
+            </li>
+          </ul>
         </div>
-        <!-- /slider-active -->
-      </div>
-      <!-- slider-area-end=  -->
+      </section>
 
       <section class="row contentRowPad">
         <div class="container">
@@ -225,101 +162,17 @@
             <h5>Gaze into her eyes that sparkle like the morning light and see gems bloom</h5>
           </div>
           <div class="row">
-            <div class="col-sm-4 product">
+            <div class="col-sm-6 product">
               <div class="productInner row m0">
                 <div class="row m0 imgHov">
-                  <img src="images/product/5.png" alt="" />
+                  <img src="static/imgs/home-img1.jpg" alt="" />
                 </div>
               </div>
             </div>
-            <div class="col-sm-4 product">
+            <div class="col-sm-6 product">
               <div class="productInner row m0">
                 <div class="row m0 imgHov">
-                  <img src="images/product/6.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 product">
-              <div class="productInner row m0">
-                <div class="row m0 imgHov">
-                  <img src="images/product/7.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="container blog_j">
-          <div class="row sectionTitle">
-            <h3>Browse all products</h3>
-            <h5>We create each work with passion, Store deep love in shining treasures</h5>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="blog_inner single">
-                <div class="blog_j_img">
-                  <img alt="" class="img-responsive" src="images/blog/blog6.png" />
-                  <div class="btn_readmore">
-                    <a href="blog.html">Read more</a>
-                  </div>
-                </div>
-                <div class="blog_j_text">
-                  <p>Discover our unriveled selection of must-have jewelry in timeless styles.</p>
-                  <span>December 2017 </span>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="blog_inner">
-                    <div class="blog_j_img">
-                      <img alt="" class="img-responsive" src="images/blog/blog1.png" />
-                      <div class="btn_readmore">
-                        <a href="blog.html">Read more</a>
-                      </div>
-                    </div>
-                    <div class="blog_j_text">
-                      <p>Discover our finely curated collection</p>
-                    </div>
-                  </div>
-                  <div class="blog_inner">
-                    <div class="blog_j_img">
-                      <img alt="" class="img-responsive" src="images/blog/blog5.png" />
-                      <div class="btn_readmore">
-                        <a href="blog.html">Read more</a>
-                      </div>
-                    </div>
-                    <div class="blog_j_text">
-                      <p>Discover our finely curated collection</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="blog_inner">
-                    <div class="blog_j_img">
-                      <img alt="" class="img-responsive" src="images/blog/blog7.png" />
-                      <div class="btn_readmore">
-                        <a href="blog.html">Read more</a>
-                      </div>
-                    </div>
-                    <div class="blog_j_text">
-                      <p>Discover our finely curated collection</p>
-                    </div>
-                  </div>
-                  <div class="blog_inner">
-                    <div class="blog_j_img">
-                      <img alt="" class="img-responsive" src="images/blog/blog3.png" />
-                      <div class="btn_readmore">
-                        <a href="blog.html">Read more</a>
-                      </div>
-                    </div>
-                    <div class="blog_j_text">
-                      <p>Discover our finely curated collection</p>
-                    </div>
-                  </div>
+                  <img src="static/imgs/home-img2.jpg" alt="" />
                 </div>
               </div>
             </div>
@@ -330,8 +183,8 @@
       <section id="featureProducts" class="row contentRowPad">
         <div class="container">
           <div class="row sectionTitle">
-            <h3>Jewelry Collection</h3>
-            <h5>browse categories</h5>
+            <h3>Browse all products</h3>
+            <h5>We create each work with passion, Store deep love in shining treasures</h5>
           </div>
           <div class="row">
             <div class="col-sm-3 product">
@@ -351,9 +204,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="row m0 proName">
+                <!-- <div class="row m0 proName">
                   <a href="detail.html">Curabitur cursus dignis</a>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="col-sm-3 product">
@@ -373,9 +226,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="row m0 proName">
+                <!-- <div class="row m0 proName">
                   <a href="detail.html">Donec aliquam</a>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="col-sm-3 product">
@@ -395,9 +248,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="row m0 proName">
+                <!-- <div class="row m0 proName">
                   <a href="detail.html">Gravida est</a>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="col-sm-3 product">
@@ -417,79 +270,123 @@
                     </div>
                   </div>
                 </div>
-                <div class="row m0 proName">
+                <!-- <div class="row m0 proName">
                   <a href="detail.html">Maximus quam posuere</a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="shopFeatures_new">
-        <div class="shopFeatures_new container">
-          <ul>
-            <li class="sf_first">
-              <img alt="" class="img-responsive" src="images/feature/1.jpg" />
-              <div class="sf_box">
-                <div class="sf_box_inner">
-                  <h2>free shipping</h2>
-                  <h3>on orders over $299</h3>
-                  <p>This offer is valid on all our store items</p>
+      <section>
+        <div class="container blog_j">
+          <div class="row sectionTitle">
+            <h3>Jewelry Collection</h3>
+            <h5>browse categories</h5>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="blog_inner single">
+                <div class="blog_j_img">
+                  <img alt="" class="img-responsive" src="static/imgs/row.jpg" />
+                  <div class="btn_readmore">
+                    <a href="sort.html">Read more</a>
+                  </div>
+                </div>
+                <!-- <div class="blog_j_text">
+                  <p>Discover our unriveled selection of must-have jewelry in timeless styles.</p>
+                  <span>December 2017 </span>
+                </div> -->
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="blog_inner">
+                    <div class="blog_j_img">
+                      <img alt="" class="img-responsive" src="static/imgs/col-1.jpg" />
+                      <div class="btn_readmore">
+                        <a href="sort.html">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blog_inner">
+                    <div class="blog_j_img">
+                      <img alt="" class="img-responsive" src="static/imgs/col-2.jpg" />
+                      <div class="btn_readmore">
+                        <a href="sort.html">Read more</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </section>
-      <!-- ====== instagram-area-start ========================================= -->
-      <div class="instagram-img-area over-hidden">
+      <div class="show-box">
+        <div class="">
+          <div class="row sectionTitle">
+            <h3>Welcome to call for consultation and purchase</h3>
+          </div>
+          <section class="row contentRowPad">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-4">
+                  <img alt="" class="img-responsive" src="images/product/6.png" />
+                </div>
+                <div class="col-xl-4">
+                  <img alt="" class="img-responsive" src="images/product/7.png" />
+                </div>
+                <div class="col-xl-4">
+                  <img alt="" class="img-responsive" src="images/product/8.png" />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- <div class="instagram-img-area over-hidden">
         <div class="row">
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6 p-0">
             <div class="instagram-img">
               <img src="static/picture/instragram-img1.jpg" alt="" />
             </div>
           </div>
-          <!-- /col -->
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6 p-0">
             <div class="instagram-img">
               <img src="static/picture/instragram-img2.jpg" alt="" />
             </div>
           </div>
-          <!-- /col -->
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6 p-0">
             <div class="instagram-img">
               <img src="static/picture/instragram-img3.jpg" alt="" />
             </div>
           </div>
-          <!-- /col -->
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6 p-0">
             <div class="instagram-img">
               <img src="static/picture/instragram-img4.jpg" alt="" />
             </div>
           </div>
-          <!-- /col -->
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6 p-0">
             <div class="instagram-img">
               <img src="static/picture/instragram-img5.jpg" alt="" />
             </div>
           </div>
-          <!-- /col -->
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6 p-0">
             <div class="instagram-img">
               <img src="static/picture/instragram-img1.jpg" alt="" />
             </div>
           </div>
-          <!-- /col -->
         </div>
-        <!-- /row -->
-      </div>
+      </div> -->
       <!-- instagram-area-end  -->
     </main>
 
     <!-- ====== footer-area-start ============================================ -->
     <footer>
-      <div class="footer-area widget-area pt-100 dark-black-bg">
+      <div class="footer-area widget-area pt-100">
         <div class="border-footer pb-35">
           <div class="container-wrapper pl-15 pr-15">
             <div class="row">
@@ -498,14 +395,14 @@
                   <h4 class="text-uppercase text-white">BECOME A DEALER</h4>
                   <form action="#" class="d-flex justify-content-left">
                     <input type="text" name="email" id="email" placeholder="Your Email" />
-                    <button type="submit" class="btn pl-30 border-white ml-2">SUBMIT</button>
+                    <button type="submit" class="btn pl-30 border-black ml-2">SUBMIT</button>
                   </form>
                 </div>
               </div>
               <!-- /col -->
               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="footer-widget subscriber-area pb-30 pl-100">
-                  <h4 class="text-uppercase text-white">CONTACT US</h4>
+                  <h4 class="text-uppercase text-black">CONTACT US</h4>
                   <div class="footer-info">
                     <ul class="footer-address mt-25">
                       <li>TEL: +1408 802 9588</li>

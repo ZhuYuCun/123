@@ -1,0 +1,35 @@
+.shopFeatures_new, .p-page-area{
+  margin-top: 100px;
+}
+
+.product .productInner .imgHov{
+  width: 100%;
+}
+
+.blog_inner{
+  margin-bottom: 18px;
+}
+
+.show-box{
+  padding: 157px 0;
+  background-color: #393939;
+}
+.show-box .sectionTitle{
+  margin-bottom: 10px
+}
+.show-box .sectionTitle h3{
+  font-family: 'Mollie glaston';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.ml-2, .mx-2{
+  margin-left: -0.5rem !important;
+}
+
+.widget-area p, .widget-area li, .widget-area li a{
+  color: #333333;
+}

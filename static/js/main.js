@@ -39,7 +39,7 @@
     wind.on('scroll', function () {
        var scroll = $(wind).scrollTop();
        if (scroll < 10) {
-    	 sticky.removeClass("sticky-menu");
+    	//  sticky.removeClass("sticky-menu");
        } else {
     	 $("#header-sticky").addClass("sticky-menu");
        }

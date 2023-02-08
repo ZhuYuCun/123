@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Sort - Agota</title>
+    <title>Sort</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
-    <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" href="images/icon/favicons.png" type="image/x-icon" />
 
     <!-- All css here -->
@@ -47,20 +46,18 @@
                   <a class="mobile-menubar" href="#"><span class="icon-menu"></span></a>
                 </div>
               </div>
-              <!-- /col -->
               <div class="col-xl-6 col-lg-1 col-md-1 col-sm-1 col-1 d-none d-lg-flex align-items-lg-center justify-content-lg-center position-static">
                 <div class="main-menu">
                   <nav id="mobile-menu">
                     <ul>
                       <li><a href="index.html">Home</a></li>
                       <li><a href="sort.html">Sort</a></li>
-                      <li><a href="detail.html">CONTACTUS</a></li>
+                      <li><a href="contactus.html">CONTACTUS</a></li>
                     </ul>
                   </nav>
                 </div>
                 <!-- /main-menu -->
               </div>
-              <!-- /col -->
               <div class="col-xl-3 col-lg-4 col-md-5 col-sm-5 col-4">
                 <div class="header-right d-flex justify-content-end">
                   <!-- <ul class="header-login d-none d-xl-block">
@@ -74,9 +71,7 @@
                 </div>
                 <!-- /header-right -->
               </div>
-              <!-- /col -->
             </div>
-            <!-- /row -->
           </div>
           <!-- /container -->
         </div>
@@ -163,9 +158,7 @@
                 </div>
                 <!-- /page title -->
               </div>
-              <!-- /col -->
             </div>
-            <!-- /row -->
           </div>
           <!-- /container -->
           <!-- </div> -->
@@ -520,7 +513,6 @@
                             <div class="product-price pl-20">
                               <span class="black-color"><span class="black-color">$1,139.40</span></span>
                             </div>
-                            <a href="sort.html" class="sale-tag position-absolute text-white text-uppercase d-inline-block">sale</a>
                           </div>
                           <!-- /single-product -->
                         </div>
@@ -1731,14 +1723,13 @@
             <div class="row">
               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="footer-widget pb-30 pl-100">
-                  <h4 class="text-uppercase text-white">BECOME A DEALER</h4>
-                  <form action="#" class="d-flex justify-content-left">
+                  <h4 class="text-uppercase text-black">BECOME A DEALER</h4>
+                  <div action="#" class="d-flex justify-content-left">
                     <input type="text" name="email" id="email" placeholder="Your Email" />
-                    <button type="submit" class="btn pl-30 border-black ml-2">SUBMIT</button>
-                  </form>
+                    <button class="btn pl-30 border-black ml-2" id="submit">SUBMIT</button>
+                  </div>
                 </div>
               </div>
-              <!-- /col -->
               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="footer-widget subscriber-area pb-30 pl-100">
                   <h4 class="text-uppercase text-black">CONTACT US</h4>
@@ -1751,9 +1742,7 @@
                   </div>
                 </div>
               </div>
-              <!-- /col -->
             </div>
-            <!-- /row -->
           </div>
           <!-- /container -->
         </div>
@@ -1782,5 +1771,21 @@
     <script src="static/js/countdown.min.js"></script>
     <script src="static/js/jquery.meanmenu.min.js"></script>
     <script src="static/js/main.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/layui/2.7.6/layui.min.js"></script>
+    <script>
+      layui.use("layer", function () {
+        var $ = layui.jquery,
+          layer = layui.layer;
+
+        $("#submit").on("click", function () {
+          layer.open({
+            title: "SUBMITTED SUCCESSEULLY",
+            area: ["390px", "160px"],
+            content: "<div>THANK YOU FOR YOUR TRUST, WE WILL CONTACT YOUAS SOONAS POSSIBLE</div>",
+            btn: null,
+          });
+        });
+      });
+    </script>
   </body>
 </html>

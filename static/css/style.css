@@ -50,7 +50,8 @@
 }
 
 body {
-	font-family: "FuturaStd-Book";
+	/* font-family: "FuturaStd-Book"; */
+	font-family: "Mollie glaston";
 	font-weight: 400;
 }
 h1,h2,h3,h4,h5,h6 {color: #222222;font-weight: 500;}

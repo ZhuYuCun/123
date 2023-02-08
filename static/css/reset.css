@@ -11,8 +11,22 @@
 }
 
 .show-box{
-  padding: 157px 0;
+  margin-top: 100px;
+  padding: 100px 0;
   background-color: #393939;
+}
+.sectionTitle button{
+  margin: 32px auto 0;
+  background: #333333;
+  height: 42px;
+  width: 200px;
+  cursor: pointer;
+  letter-spacing: 0.9375px;
+  font-size: 14px;
+  border: none;
+}
+.sectionTitle button a{
+  color: #FFFFFF;
 }
 .show-box .sectionTitle{
   margin-bottom: 10px
@@ -32,4 +46,13 @@
 
 .widget-area p, .widget-area li, .widget-area li a{
   color: #333333;
+}
+
+.layui-layer-title {
+  font-family: 'Mollie glaston' !important;
+  font-size: 18px !important;
+}
+.layui-layer-dialog .layui-layer-content{
+  font-family: 'Halyard Text' !important;
+  font-weight: 300 !important;
 }

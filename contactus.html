@@ -35,9 +35,9 @@
 
     <!--  ====== header-area-start=======================================  -->
     <header>
-      <div id="header-sticky" class="header-area white-bg border-bottom">
-        <div class="header header-2 position-relative pl-35 pr-35">
-          <div class="container-fluid">
+      <div id="header-sticky" class="header-area sticky-menu">
+        <div class="header position-absolute pl-35 pr-35">
+          <div class="container">
             <div class="row align-items-center justify-content-lg-between">
               <div class="col-xl-3 col-lg-7 col-md-7 col-sm-7 col-8">
                 <div class="logo float-right float-xl-left">
@@ -47,28 +47,28 @@
                   <a class="mobile-menubar" href="javascript:void(0);"><i class="fas fa-bars"></i></a>
                 </div>
               </div>
-              <div class="col-xl-6 col-lg-1 col-md-1 col-sm-1 col-1 d-none d-lg-flex align-items-lg-center justify-content-lg-center position-static pr-0">
+              <div class="col-xl-6 col-lg-1 col-md-1 col-sm-1 col-1 d-none d-lg-flex align-items-lg-center justify-content-lg-center position-static">
                 <div class="main-menu">
                   <nav id="mobile-menu">
                     <ul>
                       <li><a href="index.html">Home</a></li>
                       <li><a href="sort.html">Sort</a></li>
-                      <li><a href="contactus.html">CONTACTUS</a></li>
+                      <li><a href="contactus.html" class="active">CONTACTUS</a></li>
                     </ul>
                   </nav>
                 </div>
-                <!-- /main-menu -->
-              </div>
-              <div class="col-xl-3 col-lg-4 col-md-5 col-sm-5 col-4">
-                <div class="header-right d-flex justify-content-end"></div>
-                <!-- /header-right -->
+                <div class="header-right d-flex justify-content-end">
+                  <ul class="header-search d-none d-xl-block">
+                    <li>
+                      <a href="javascript:void(0);"><span class="icon-search"></span></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <!-- /container -->
         </div>
       </div>
-      <!-- /header-bottom -->
     </header>
     <!--  header-area-end  -->
 

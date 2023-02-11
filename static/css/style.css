@@ -360,7 +360,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	filter: invert(1) sepia(1) hue-rotate(0deg) brightness(1.2);
 }
 .sticky-menu .header .logo img,.header-area:hover .logo img,.header-2 .logo img,.header-6 .logo img{filter: invert(0) sepia(0) hue-rotate(0deg) brightness(0);}
-.sticky-menu .header a.active::before,.header-area:hover a.active::before,.header.header-2 a.active::before,.header.header-6 a.active::before {background: #222;}
+.sticky-menu .header a.active::before,.header-area:hover a.active::before,.header.header-2 a.active::before,.header.header-6 a.active::before {background: #333;}
 .main-menu ul li {
 	display: inline-block;
 	margin: 0 22px;
@@ -385,6 +385,10 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	background: #fff;
 	height: 2px;
 	transition: 0.3s;
+}
+
+.main-menu ul li.active > a{
+	opacity: .6;
 }
 .main-menu ul li > a.active::before{width: 100%;}
 .main-menu ul li > a:hover::before,.main-menu ul li > a:hover a.active::before{background: #222; width: 100%; left: 0;}
@@ -476,7 +480,10 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 /* .header-2 .main-menu ul li.logo a::before{display: none;} */
 .header-2 .main-menu ul li,.header-3 .main-menu ul li {margin-left: 45px;margin-right: 0;}
 .header-2 ul li a, .header-2 .header-right li a{color: #222222;}
-.sticky-menu .header a,.header-area:hover a,.header.header-2 a,.header.header-6 a{color: #222222;}
+.sticky-menu .header a,.header-area:hover a,.header.header-2 a,.header.header-6 a{color: #333;}
+.header-area a:hover{
+	opacity: .6;
+}
 .header-right .header-login a, .header-2 .header-right .search a {font-size: 14px;}
 /* 3. slider
 -------------------------------------------------------------- */
@@ -563,6 +570,10 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	-ms-transition: all .3s ease-out;
 	-o-transition: all .3s ease-out;
 }
+.single-product:hover{
+	transform: scale(1.08);
+}
+
 
 .single-product:hover{-moz-box-shadow: 0 0 25px rgba(0,0,0,0.1);-webkit-box-shadow: 0 0 25px rgba(0,0,0,0.1);box-shadow: 0 0 25px rgba(0,0,0,0.1);}
 .single-product-img  img{width: 100%;}
@@ -1342,7 +1353,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 /* 25. footer area
 -------------------------------------------------------------- */
 .footer-widget h4{
-	font-size: 20px;
+	font-size: 32px;
 	font-weight: 500;
 }
 .widget-area p,.widget-area li,.widget-area li a{
@@ -1519,4 +1530,6 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 
 input{
 	flex: 1;
+	text-indent: 16px;
+	font-size: 20px;
 }

@@ -25,6 +25,12 @@
   font-size: 14px;
   border: none;
 }
+.sectionTitle button:hover{
+  background: #C6AD89;
+}
+.sectionTitle button:active{
+  background: #977849;
+}
 .sectionTitle button a{
   color: #FFFFFF;
 }
@@ -55,4 +61,27 @@
 .layui-layer-dialog .layui-layer-content{
   font-family: 'Halyard Text' !important;
   font-weight: 300 !important;
+}
+
+.productInner img:hover{
+    transform: scale(1.18);
+    transition: all 5s ease
+}
+
+.product-name{
+  text-align: center;
+  font-family: 'Mollie glaston';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+  order: 0;
+  flex-grow: 0;
+}
+.product-price{
+  font-size: 10px;
+  color: #977849;
+  text-align: center;
 }

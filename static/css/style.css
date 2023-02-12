@@ -1353,7 +1353,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 /* 25. footer area
 -------------------------------------------------------------- */
 .footer-widget h4{
-	font-size: 32px;
+	font-size: 28px;
 	font-weight: 500;
 }
 .widget-area p,.widget-area li,.widget-area li a{
@@ -1530,6 +1530,11 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 
 input{
 	flex: 1;
-	text-indent: 16px;
+	text-indent: 8px;
 	font-size: 20px;
+	outline-color: #ccc;
 }
+input.none{
+	outline: none;
+}
+

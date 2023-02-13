@@ -7,7 +7,7 @@
 */
 
 /* CSS Index
------------------------------------
+---------------------
 1. Theme default css
 2. header
 3. slider
@@ -40,18 +40,13 @@
 /* 1. Theme default css
 -------------------------------------------------------------- */
 @import url('a25b8ff0690d461099c3f5c5feab5638.css');
-@font-face {font-family: "FuturaStd-Book";
-	src: url("../fonts/FuturaStd-Book/35e5d1a7aa6da471de4cfb4a47ebaca8.eot"); /* IE9*/
-	src: url("../fonts/35e5d1a7aa6da471de4cfb4a47ebaca8.eot") format("embedded-opentype"), /* IE6-IE8 */
-	url("../fonts/35e5d1a7aa6da471de4cfb4a47ebaca8.woff2") format("woff2"), /* chrome、firefox */
-	url("../fonts/35e5d1a7aa6da471de4cfb4a47ebaca8.woff") format("woff"), /* chrome、firefox */
-	url("../fonts/35e5d1a7aa6da471de4cfb4a47ebaca8.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-	url("../fonts/35e5d1a7aa6da471de4cfb4a47ebaca8.svg#futurastd-book") format("svg"); /* iOS 4.1- */
+@font-face {font-family: "Manrope";
+	src: url("../fonts/Manrope-VariableFont_wght.ttf") format("truetype");
 }
 
 body {
-	/* font-family: "FuturaStd-Book"; */
-	font-family: "Mollie glaston";
+	/* font-family: "Manrope"; */
+	font-family: 'Amiri';
 	font-weight: 400;
 }
 h1,h2,h3,h4,h5,h6 {color: #222222;font-weight: 500;}
@@ -374,6 +369,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	text-transform: capitalize;
 	padding: 38px 0;
 	position: relative;
+  font-family: 'Amiri' !important;
 }
 .main-menu ul li:hover > a {color: #222;}
 .main-menu ul li > a::before{
@@ -641,6 +637,9 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	font-size: 14px;
 	font-family: 'Rubik', sans-serif;
 }
+.product-price{
+	font-family: Manrope;
+}
 .product-price span.old-price{color: #999999;}
 .sale-tag {
 	font-size: 13px;
@@ -654,6 +653,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	left: 0;
 	right: 0;
 	bottom: 0;
+	display: none;
 }
 .single-product-hover-img a img{opacity: 0; transition: .3s;}
 .single-product:hover .single-product-hover-img a img{opacity: 1;}
@@ -1353,6 +1353,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 /* 25. footer area
 -------------------------------------------------------------- */
 .footer-widget h4{
+  font-family: 'Amiri' !important;
 	font-size: 28px;
 	font-weight: 500;
 }
@@ -1392,7 +1393,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 .copyright-menu {margin-left: -26px;}
 .copyright-area .copyright-menu li {margin-right: 25px;}
 .footer-area-2 .copyright-menu li a{color: #222; font-size: 14px;}
-.footer-6 .footer-address li {margin-bottom: 12px;}
+.footer-6 .footer-address li {margin-bottom: 12px; font-family: Manrope;}
 .footer-4 .footer-widget li a{color: #e1e1e1;}
 .footer-area-5 {bottom: 60px;width: 100%;}
 .footer-area-5 .copyright-menu li a {color: #999;}
@@ -1411,9 +1412,11 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	border-radius: 5px;
 }
 .top span {
-	font-size: 18px;
-	padding: 12px 12px;
+	background-image: url(/static/picture/upward.png);
 	display: block;
+	width: 30px;
+	height: 30px;
+	background-size: cover;
 }
 /* header-search-details */
 .header-search-details {

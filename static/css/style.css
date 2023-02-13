@@ -885,7 +885,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	padding: 10px 15px;
 }
 .product-gallery-btn {left: 0;top: 0;}
-.product-gallery-btn.right-site {left: auto;right: 0;}
+.product-gallery-btn.right-site {left: auto;right: 0;margin-right: 0 !important;}
 .vertical-left-tab .product-gallery-btn {left: auto;right: 0;top: 0; }
 .product-gallery-btn  a:hover{box-shadow: 0 0 10px rgba(0,0,0,.2);}
 

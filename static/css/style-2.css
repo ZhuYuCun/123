@@ -1206,7 +1206,7 @@ button:hover {
     padding: 0;
     text-align: center;
     font-weight: lighter;
-    font-family: Amiri;;
+    font-family: Amiri;
     font-size: 14px;
     display: inline-block;
     position: relative;
@@ -5780,7 +5780,6 @@ abbr[title] {
     width: 200px;
     height: 84px;
     cursor: pointer;
-    background-image: url(../images/Arrow.svg);
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 50%;

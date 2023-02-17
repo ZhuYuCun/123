@@ -1,0 +1,28 @@
+{
+  "name": "jewellery-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dayjs": "^1.11.7",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "sqlite3": "^5.1.4",
+    "uuid": "^9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhuYuCun/jewelry.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZhuYuCun/jewelry.github.io/issues"
+  },
+  "homepage": "https://github.com/ZhuYuCun/jewelry.github.io#readme"
+}

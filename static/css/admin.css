@@ -1,0 +1,31 @@
+.page{
+  margin-top: 30px;
+}
+.form{
+  display: none;
+}
+.cover{
+  display: none;
+}
+.add-btn{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: aliceblue;
+  border: solid 1px #ccc;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 5px 5px 12px #ccc;
+}
+.add-btn:active{
+  background-color: rgb(192, 222, 248);
+}
+.mini-img{
+  width: 50px;
+  height: 50px;
+}

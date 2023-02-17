@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>admin</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+    <script src="static/js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="static/css/admin.css" />
+  </head>
+  <body>
+    <div class="container page">
+      <div class="add-btn" id="addBtn">add</div>
+
+      <form id="formRef" class="form">
+        <h5>产品表单</h5>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">title</label>
+          <div class="col-sm-10">
+            <input name="title" type="text" class="form-control" id="inputEmail3" required />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">describe</label>
+          <div class="col-sm-10">
+            <textarea name="describe" class="form-control" id="validationTextarea" required></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">sub</label>
+          <div class="col-sm-10">
+            <input name="sub" type="text" class="form-control" id="inputEmail3" required />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">sort</label>
+          <div class="col-sm-10">
+            <input name="sort" type="number" class="form-control" id="inputEmail3" required />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">popular</label>
+          <div class="col-sm-10">
+            <input name="popular" type="text" class="form-control" id="inputEmail3" required />
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <div id="button" class="btn btn-primary">Submit</div>
+          </div>
+        </div>
+      </form>
+
+      <form class="cover">
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">封面图：</label>
+          <div class="col-sm-10" style="display: flex">
+            <input type="file" class="form-control-file" id="file1" />
+            <button id="btnUpload" type="button" class="btn btn-primary">upload</button>
+            <span style="margin-right: 5px"> </span>
+            <button id="exitBtn" type="button" class="btn btn-danger">exit</button>
+          </div>
+        </div>
+      </form>
+
+      <h5>产品列表</h5>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>sub</th>
+            <th>describe</th>
+            <th>sort</th>
+            <th>updateTime</th>
+            <th>cover</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script>
+      $(function () {
+        initData();
+
+        $('#addBtn').click(function () {
+          $('#formRef').show();
+          $('#addBtn').hide();
+        });
+      });
+    </script>
+
+    <script>
+      var productId = null;
+
+      // 初始化页面 刷新列表
+      function initData() {
+        $('#formRef').hide();
+        $('#addBtn').show();
+
+        $.ajax({
+          url: '/list',
+          type: 'GET',
+          success: function (row) {
+            $('#tbody').empty();
+
+            let str = '';
+            row.data.forEach((element) => {
+              // element.cover = 'images/product/1.png';
+              let edit = `<button onclick='editItem(${element.id})' type="button" class="btn btn-primary btn-sm">edit</button>`;
+              let del = `<button onclick='deleteItem(${element.id})' type="button" class="btn btn-danger btn-sm">del</button>`;
+              let img = `<img class='mini-img' src="${element.cover}" alt="">`;
+              str += `<tr>
+                      <td>${element.id}</td>
+                      <td>${element.title}</td>
+                      <td>${element.sub || ''}</td>
+                      <td>${element.describe || ''}</td>
+                      <td>${element.sort || ''}</td>
+                      <td>${element.updateTime || ''}</td>
+                      <td onclick='addOrUpdateCover(${element.id})'>${element.cover === 'undefined' || !element.cover ? 'empty' : img}</td>
+                      <td>${edit} ${del}</td>
+                    </tr>`;
+            });
+            $('#tbody').append($(str));
+          },
+        });
+      }
+
+      // 新增
+      $('#button').click(function () {
+        console.log('formRef', $('#formRef').serialize());
+        return;
+        $.ajax({
+          url: '/add',
+          type: 'post',
+          data: $('#formRef').serialize(),
+          dataType: 'JSON',
+          success: function (res) {
+            $('#formRef').hide();
+            $('#addBtn').show();
+            initData();
+          },
+          error: function () {
+            alert('error');
+          },
+        });
+      });
+
+      $('#exitBtn').click(function () {
+        $('.cover').hide();
+      });
+
+      $('#btnUpload').click(function () {
+        upload();
+      });
+
+      // 编辑
+      function editItem(id) {
+        id = id;
+      }
+
+      // cover新增修改
+      function addOrUpdateCover(id) {
+        productId = id;
+      }
+
+      // 删除
+      function deleteItem(id) {
+        $.ajax({
+          url: `/del?id=${id}`,
+          type: 'delete',
+          dataType: 'JSON',
+          success: function (res) {
+            console.log('res', '删除成功');
+            initData();
+          },
+          error: function () {
+            alert('error');
+          },
+        });
+      }
+
+      // 上传文件
+      function upload() {
+        if (!productId) return alert('productId');
+        var files = $('#file1')[0].files;
+        if (files.length <= 0) {
+          return alert('请选择文件后再上传');
+        }
+        var fd = new FormData();
+        fd.append('avatar', files[0]);
+        $.ajax({
+          method: 'POST',
+          url: `/upload?id=${productId}`,
+          data: fd,
+          processData: false,
+          contentType: false,
+          success: function (res) {
+            initData();
+            $('.cover').hide();
+          },
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -102,3 +102,33 @@
   background-size: cover;
   background-position: center;
 }
+
+
+
+/* details */
+.detail-title{
+  font-family: Amiri;
+}
+
+.detail-describe, .detail-describe p{
+  font-family: Manrope;
+  font-size: 16px;
+  line-height: 200%;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  color: #333333;
+}
+
+.detail-bottom{
+  margin-top: 45px;
+  font-family: Amiri;
+  font-size: 20px;
+  font-weight: normal;
+}
+.detail-bottom img{
+  margin-left: 21px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}

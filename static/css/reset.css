@@ -5,6 +5,29 @@
 .header-right{
   justify-content: flex-end !important;
 }
+.carousel-caption{
+  right: auto;
+  left: 48px;
+  color: #333333;
+
+}
+.carousel-caption p{
+  margin: 0;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 300;
+  /* font-family: Manrope; */
+  font-family: 'PingFang SC';
+  margin-bottom: 10px;
+}
+.carousel-caption h5{
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-weight: 400;
+  font-size: 40px;
+  font-family: Amiri;
+}
 
 .product .productInner .imgHov{
   width: 100%;

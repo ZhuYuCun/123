@@ -39,7 +39,6 @@
 
 /* 1. Theme default css
 -------------------------------------------------------------- */
-@import url('a25b8ff0690d461099c3f5c5feab5638.css');
 @font-face {font-family: "Manrope";
 	src: url("../fonts/Manrope-VariableFont_wght.ttf") format("truetype");
 }
@@ -565,9 +564,11 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	-moz-transition: all .3s ease-out;
 	-ms-transition: all .3s ease-out;
 	-o-transition: all .3s ease-out;
+	border-color: #fff;
 }
 .single-product:hover{
 	transform: scale(1.08);
+	border: solid 8px #fff;
 }
 
 
@@ -1437,7 +1438,14 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	margin: 30px;
 	display: block;
 }
-.header-search-content ul li a:hover,.header-search-details ul li a.active{color: #222222;}
+.header-search-details ul li{
+	cursor: pointer;
+}
+.header-search-details ul li a {
+	color: #828282 !important;
+}
+
+.header-search-content ul li a:hover,.header-search-details ul li a.active{color: #222222 !important;font-weight: bolder;}
 /* form css  start*/
 .header-search-content form a{left: 10px; top: 18px; font-size: 22px; color: #555555;}
 .header-search-content form input,.subscribe-form input{

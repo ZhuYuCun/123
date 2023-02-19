@@ -26,7 +26,7 @@
   content: "\e905";
 }
 .icon-clear{
-  background-image: url(/images/icons/close.png);
+  background-image: url(/static/imgs/close.png);
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: center;
@@ -52,7 +52,7 @@
 }
 
 .icon-search{
-  background-image: url(/images/icons/search.png);
+  background-image: url(/static/imgs/search.png);
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: center;

@@ -66,7 +66,7 @@ function detailRender(id) {
 
       $('#v-pills-tab1').append(`
         <a class="nav-link show active" id="v-pills-home-tab1" data-toggle="pill" href="#v-pills-home1" role="tab" aria-controls="v-pills-home1" aria-selected="true">
-          <img class="product-thumbnail" src="images/product/${id}-1.JPG" alt="" />
+          <img class="product-thumbnail" src="images/product/${data.cover}" alt="" />
         </a>
         <a class="nav-link" id="v-pills-profile-tab1" data-toggle="pill" href="#v-pills-profile1" role="tab" aria-controls="v-pills-profile1" aria-selected="false">
           <img class="product-thumbnail" src="images/product/${id}-2.JPG" alt="" />
@@ -78,10 +78,16 @@ function detailRender(id) {
 
       $('#v-pills-tabContent1').append(`
         <div class="tab-pane fade show active" id="v-pills-home1" role="tabpanel" aria-labelledby="v-pills-home-tab1">
+          <div class="product-gallery-btn position-absolute right-site mr-4">
+            <a href="images/product/${data.cover}" class="zoom-gallery dark-black-color bg-white d-block m-2" data-fancybox="images"
+              ><i class="fas fa-compress"></i><img class="d-none width100" src="images/product/${data.cover}" alt=""
+            /></a>
+          </div>
           <div class="product-img">
-            <img class="width100 height100" src="images/product/${id}-1.JPG" alt="" />
+            <img class="width100" src="images/product/${data.cover}" alt="" />
           </div>
         </div>
+        
         <div class="tab-pane fade" id="v-pills-profile1" role="tabpanel" aria-labelledby="v-pills-profile-tab1">
           <div class="product-gallery-btn position-absolute right-site mr-4">
             <a href="images/product/${id}-2.JPG" class="zoom-gallery dark-black-color bg-white d-block m-2" data-fancybox="images"
@@ -92,6 +98,7 @@ function detailRender(id) {
             <img class="width100" src="images/product/${id}-2.JPG" alt="" />
           </div>
         </div>
+
         <div class="tab-pane fade" id="v-pills-messages1" role="tabpanel" aria-labelledby="v-pills-messages-tab1">
           <div class="product-gallery-btn position-absolute right-site mr-4">
             <a href="images/product/${id}-3.JPG" class="zoom-gallery dark-black-color bg-white d-block m-2" data-fancybox="images"

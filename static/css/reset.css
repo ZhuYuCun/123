@@ -183,3 +183,7 @@
 .icons a:nth-child(3):hover{
   background-image: url(/images/icon/instagram1.png);
 }
+
+.views{
+  padding-top: 5px;
+}

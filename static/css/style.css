@@ -708,7 +708,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 .product-tabs{width: 100px;}
 .product-tabs .nav-link {
 	width: 80px;
-	height: 100px;
+	height: 80px;
 	padding: 0;
 	opacity: .6;
 }
@@ -825,7 +825,9 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 /* 13. big img product area
 -------------------------------------------------------------- */
 /* .product-left-img-info .quantity-field input {height: 62px;} */
-
+.product-left-img-info {
+	padding-left: 28px !important;
+}
 .product-left-img-info .social-sharing li a {margin-right: 10px; margin-left: 0;}
 .product-left-img-info .price span{font-size: 24px;font-weight: 700;}
 .product-view-tab .nav-link {

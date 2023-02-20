@@ -711,6 +711,8 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	height: 80px;
 	padding: 0;
 	opacity: .6;
+	margin-bottom: 20px;
+	margin-right: 20px;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link,.nav-pills .nav-link:hover, .nav-pills .show > .nav-link  {background-color: transparent;opacity: 1;}
 
@@ -826,7 +828,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 -------------------------------------------------------------- */
 /* .product-left-img-info .quantity-field input {height: 62px;} */
 .product-left-img-info {
-	padding-left: 28px !important;
+	padding-left: 30px !important;
 }
 .product-left-img-info .social-sharing li a {margin-right: 10px; margin-left: 0;}
 .product-left-img-info .price span{font-size: 24px;font-weight: 700;}
@@ -1452,7 +1454,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 .header-search-content form a{left: 10px; top: 18px; font-size: 22px; color: #555555;}
 .header-search-content form input,.subscribe-form input{
 	border: 0;
-	border-bottom: 2px solid #e1e1e1;
+	border-bottom: .5px solid #e1e1e1;
 	padding: 0;
 	width: 100%;
 	padding-left: 45px;
@@ -1466,7 +1468,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 	text-indent: 40px;
 }
 .subscribe-form form input{text-align: center; height: 55px; padding-left: 0;}
-.header-search-content form input:focus,.subscribe-form input:focus{border-bottom: 2px solid #222;}
+.header-search-content form input:focus,.subscribe-form input:focus{border-bottom: .5px solid #222;}
 .search-form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	color: #fff;
 }

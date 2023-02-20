@@ -3,7 +3,6 @@ const productRouter = express.Router();
 const fs = require('fs');
 
 productRouter.get('/', function (req, res) {
-  console.log(req.query.id);
   let id = req.query.id;
   fs.readFile('./json/product.json', (err, data) => {
     if (err) {

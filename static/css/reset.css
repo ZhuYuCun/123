@@ -155,3 +155,31 @@
   height: 30px;
   cursor: pointer;
 }
+
+.icons a{
+  display: inline-block;
+  margin-left: 10px;
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icons a:nth-child(1) {
+  background-image: url(/images/icon/facebook.png);
+}
+.icons a:nth-child(1):hover{
+  background-image: url(/images/icon/facebook1.png);
+}
+.icons a:nth-child(2) {
+  background-image: url(/images/icon/twitter.png);
+}
+.icons a:nth-child(2):hover{
+  background-image: url(/images/icon/twitter1.png);
+}
+.icons a:nth-child(3) {
+  background-image: url(/images/icon/instagram.png);
+}
+.icons a:nth-child(3):hover{
+  background-image: url(/images/icon/instagram1.png);
+}

@@ -1,10 +1,10 @@
 $(function () {
   search();
-});
 
-// $('.carousel').carousel({
-//   interval: 1000,
-// });
+  // $('.carousel').carousel({
+  //   interval: 10000,
+  // });
+});
 
 // search
 $('.header-search-details ul li').click(function () {
@@ -39,7 +39,7 @@ function search(query) {
         renderSortPage(resData.data);
       }
 
-      if (pathName.indexOf('index') != -1) {
+      if (pathName.indexOf('index') != -1 || pathName.length < 2) {
         indexRender(resData.data);
       }
 

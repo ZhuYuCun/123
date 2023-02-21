@@ -1,11 +1,22 @@
 $(function () {
   search();
   $('#sortId')
-    .hover(function () {
+    .mouseover(function () {
+      $('#mobile-menu').find('a').removeClass('active');
+
       $('.sort-child').show();
+      $('.mode').show();
     })
     .mouseleave(function () {
       $('.sort-child').hide();
+      $('.mode').hide();
+
+      if (location.pathname === '/index.html' || location.pathname === '/') {
+        $('#mobile-menu').find('a').eq(0).addClass('active');
+      }
+      if (location.pathname === '/sort.html') {
+        $('#mobile-menu').find('a').eq(1).addClass('active');
+      }
     });
 
   $('#sortSelect').change(function () {

@@ -344,9 +344,12 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 .sticky-menu .header-6 {top: -20px;}
 .sticky-menu .header{
 	background: #fff;
-	-webkit-box-shadow: 0 8px 4px -7px rgba(115,115,115,0.1);
+	/* -webkit-box-shadow: 0 8px 4px -7px rgba(115,115,115,0.1);
 	-moz-box-shadow: 0 8px 4px -7px rgba(115,115,115,0.1);
-	box-shadow: 0 8px 4px -7px rgba(115,115,115,0.1);
+	box-shadow: 0 8px 4px -7px rgba(115,115,115,0.1); */
+}
+#sortId{
+	padding-right: 26px;
 }
 .header-area.sticky-menu,.header:hover {background: #fff;}
 .logo img {max-width: 45px;}
@@ -486,6 +489,16 @@ color: #333333;
 .sticky-menu .header a,.header-area:hover a,.header.header-2 a,.header.header-6 a{color: #333;}
 .header-area a:hover{
 	opacity: 1;
+}
+.mode{
+	display: none;
+	height: 150px;
+	width: 100vw;
+	background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 71.96%);
+	position: fixed;
+	top: 100px;
+	left: 0;
+	z-index: 1;
 }
 .header-right .header-login a, .header-2 .header-right .search a {font-size: 14px;}
 /* 3. slider

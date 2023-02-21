@@ -1,5 +1,16 @@
 $(function () {
   search();
+  $('#sortId')
+    .hover(function () {
+      $('.sort-child').show();
+    })
+    .mouseleave(function () {
+      $('.sort-child').hide();
+    });
+
+  $('#sortSelect').change(function () {
+    search({ sort: $(this).val() });
+  });
 
   // $('.carousel').carousel({
   //   interval: 10000,
@@ -36,7 +47,8 @@ function search(query) {
       var resData = JSON.parse(row);
       var pathName = location.pathname;
       if (pathName.indexOf('sort') != -1) {
-        renderSortPage(resData.data);
+        let datas = query ? resData.data.sort(() => (Math.random() > 0.5 ? -1 : 1)) : resData.data;
+        renderSortPage(datas);
       }
 
       if (pathName.indexOf('index') != -1 || pathName.length < 2) {
@@ -120,6 +132,8 @@ function renderSortPage(data) {
   $('#productNumber').text(data.length);
 
   $('#col-2').find('.row').empty();
+  $('#col-3').find('.row').empty();
+  $('#col-4').find('.row').empty();
   data.forEach((item) => {
     // 渲染方式1
     var model1 = `

@@ -9,7 +9,21 @@
   right: auto;
   left: 48px;
   color: #333333;
-
+}
+.sort-child{
+    display: none;
+    position: absolute;
+    top: 90px;
+    color: #000000;
+    font-size: 16px;
+    font-style: normal;
+}
+.sort-child:hover {
+  display: block;
+}
+.sort-child a {
+  font-size: 16px !important;
+  cursor: pointer;
 }
 .carousel-caption p{
   margin: 0;

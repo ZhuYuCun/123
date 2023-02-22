@@ -1,8 +1,12 @@
 const express = require('express');
-const productRouter = express.Router();
+const router = express.Router();
 const fs = require('fs');
+const bodyParser = require('body-parser');
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+const resJson = require('../utils');
 
-productRouter.get('/', function (req, res) {
+// 所有产品列表
+router.get('/', function (req, res) {
   let id = req.query.id;
   fs.readFile('./json/product.json', (err, data) => {
     if (err) {
@@ -19,4 +23,30 @@ productRouter.get('/', function (req, res) {
   });
 });
 
-module.exports = productRouter;
+router.post('/update', urlencodedParser, (req, res) => {
+  let body = req.body;
+  console.log('prop', body.prop);
+  console.log('value', body.value);
+  console.log('id', body.id);
+  fs.readFile('./json/product.json', (err, data) => {
+    if (err) {
+      res.send(err);
+    }
+
+    if (body.id) {
+      let jsonData = JSON.parse(data);
+      jsonData.data.forEach((item) => {
+        if (item.id == body.id) {
+          item[body.prop] = body.value;
+        }
+      });
+
+      fs.writeFile('./json/product.json', JSON.stringify(jsonData), (err) => {
+        if (err) return console.log(err);
+        res.send(resJson.resJson('更新成功'));
+      });
+    }
+  });
+});
+
+module.exports = router;

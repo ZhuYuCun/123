@@ -1,5 +1,6 @@
 .page{
   margin-top: 30px;
+  padding: 15px;
 }
 .form{
   display: none;
@@ -26,6 +27,7 @@
   background-color: rgb(192, 222, 248);
 }
 .mini-img{
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
 }

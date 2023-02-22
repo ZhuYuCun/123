@@ -58,3 +58,6 @@
   background-position: center;
   padding: 10px;
 }
+.icon-search:hover{
+  opacity: .6;
+}

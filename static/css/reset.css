@@ -145,6 +145,7 @@
 /* details */
 .detail-title{
   font-family: Amiri;
+  font-style: italic;
 }
 
 .detail-describe, .detail-describe p{

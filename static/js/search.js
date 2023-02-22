@@ -1,16 +1,17 @@
+let query = {};
 $(function () {
+  let locationSearch = location.search.replace('?', '');
+  if (locationSearch && locationSearch.indexOf('=') != -1) {
+    let queryArr = locationSearch.split('=');
+    query.classify = queryArr[1];
+  }
+
   search();
-  $('#sortId')
+  $('#mobile-menu a')
     .mouseover(function () {
       $('#mobile-menu').find('a').removeClass('active');
-
-      $('.sort-child').show();
-      $('.mode').show();
     })
     .mouseleave(function () {
-      $('.sort-child').hide();
-      $('.mode').hide();
-
       if (location.pathname === '/index.html' || location.pathname === '/') {
         $('#mobile-menu').find('a').eq(0).addClass('active');
       }
@@ -18,9 +19,20 @@ $(function () {
         $('#mobile-menu').find('a').eq(1).addClass('active');
       }
     });
+  $('#sortId')
+    .mouseover(function () {
+      $('.sort-child').show();
+      $('.mode').show();
+    })
+    .mouseleave(function () {
+      $('.sort-child').hide();
+      $('.mode').hide();
+    });
 
+  // 排序选择时候触发
   $('#sortSelect').change(function () {
-    search({ sort: $(this).val() });
+    query.sort = $(this).val();
+    search();
   });
 
   // $('.carousel').carousel({
@@ -49,7 +61,7 @@ layui.use('layer', function () {
   });
 });
 
-function search(query) {
+function search() {
   $.ajax({
     url: '/product',
     type: 'GET',
@@ -58,8 +70,7 @@ function search(query) {
       var resData = JSON.parse(row);
       var pathName = location.pathname;
       if (pathName.indexOf('sort') != -1) {
-        let datas = query ? resData.data.sort(() => (Math.random() > 0.5 ? -1 : 1)) : resData.data;
-        renderSortPage(datas);
+        renderSortPage(resData.data, query);
       }
 
       if (pathName.indexOf('index') != -1 || pathName.length < 2) {
@@ -74,7 +85,7 @@ function search(query) {
     },
   });
 }
-
+// 详情页渲染
 function detailRender(id) {
   $.ajax({
     url: `/product?id=${id}`,
@@ -137,9 +148,12 @@ function detailRender(id) {
   });
 }
 
-// render sort page
+// 分类页面数据
 function renderSortPage(data) {
-  console.log('render sort page:', data);
+  if (query) {
+    data = queryData(data, query);
+  }
+
   $('#productNumber').text(data.length);
 
   $('#col-2').find('.row').empty();
@@ -195,7 +209,7 @@ function renderSortPage(data) {
   });
 }
 
-// render index page
+// 首页数据
 function indexRender(data) {
   let recmmodlist = data.filter((item) => item.recommendIndex);
   console.log('render index page', recmmodlist);
@@ -217,7 +231,7 @@ function indexRender(data) {
   });
 }
 
-// detail page
+// 详情页推荐 page
 function detailRecmmodRender(data) {
   console.log('render detail page', recmmodlist);
 
@@ -259,4 +273,34 @@ function detailRecmmodRender(data) {
       `;
     $('#related').append(model);
   });
+}
+
+// 排序 类型筛选 流行 时间排序
+function queryData(data, query) {
+  console.log('query', query);
+  let resData = data;
+  // 类型筛选
+  if (query.classify) {
+    resData = resData.filter((item) => item.classify === query.classify);
+  }
+  // 时间排序
+  // 流行度排序
+  let handleSort = function (prop) {
+    return function (a, b) {
+      const val1 = a[prop];
+      const val2 = b[prop];
+
+      if (prop === 'createTime') {
+        // 时间排序
+        return new Date(val2) - new Date(val1);
+      }
+
+      return val2 - val1;
+    };
+  };
+  if (query.sort) {
+    resData.sort(handleSort(query.sort));
+  }
+
+  return resData;
 }

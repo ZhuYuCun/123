@@ -361,6 +361,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 .sticky-menu .header a{
 	opacity: 1;
 	color: #333333;
+	font-style: italic;
 }
 .sticky-menu .header a.active {
 	opacity: .6;
@@ -929,7 +930,7 @@ a:focus,a:hover,.portfolio-cat a:hover,.footer-menu li a:hover {
 .page-height3{min-height: 500px;}
 .nice-select.open .list {border-radius: 0;}
 .nice-select .option.selected {font-weight: normal;}
-.nice-select {height: 22px;line-height: 20px;}
+.nice-select {height: 22px;line-height: 20px; font-size: 20px;}
 .shop-title h5,.product-filter a,.single-product-content p{font-size: 14px;}
 .ser-icon {
 	min-width: 22px;

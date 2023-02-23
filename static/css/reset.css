@@ -147,6 +147,9 @@
   font-family: Amiri;
   font-style: italic;
 }
+.italic{
+  font-style: italic;
+}
 
 .detail-describe, .detail-describe p{
   font-family: Manrope;
@@ -200,5 +203,9 @@
 }
 
 .views{
-  padding-top: 5px;
+  padding-top: 3px;
+}
+
+#sortSelect, .current{
+  font-size: 20 !important;
 }

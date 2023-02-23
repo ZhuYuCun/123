@@ -17,6 +17,8 @@
     color: #000000;
     font-size: 16px;
     font-style: normal;
+    /* background-color: #FFFFFF;
+    padding: 0 10px; */
 }
 .sort-child:hover {
   display: block;

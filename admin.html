@@ -68,9 +68,10 @@
               let type = `<input type="text" onblur="updateInfo(${element.id}, 'type', this)" value="${element.type || ''}">`;
 
               let classify = `<select name="classify" style="height: 2.5em;" onchange="updateInfo(${element.id},'classify', this)">
-                            <option value="ring" ${element.classify === 'ring' ? 'selected' : ''}>ring</option>
-                            <option value="earring" ${element.classify === 'earring' ? 'selected' : ''}>earring</option>
-                            <option value="necklace" ${element.classify === 'necklace' ? 'selected' : ''}>necklace</option>
+                            <option value="ring" ${element.classify === 'ring' ? 'selected' : ''}>戒指</option>
+                            <option value="earring" ${element.classify === 'earring' ? 'selected' : ''}>耳环</option>
+                            <option value="necklace" ${element.classify === 'necklace' ? 'selected' : ''}>项链</option>
+                            <option value="bracelet" ${element.classify === 'bracelet' ? 'selected' : ''}>手链/手镯</option>
                           </select>`;
 
               let popular = `<input type="number" onblur="updateInfo(${element.id}, 'popular', this)" value="${element.popular || ''}">`;

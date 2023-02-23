@@ -227,7 +227,7 @@ function indexRender(data) {
       </div>
       `;
 
-    $('#recmmodIndex').append(model);
+    // $('#recmmodIndex').append(model);
   });
 }
 

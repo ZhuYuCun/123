@@ -82,7 +82,7 @@
   margin-bottom: 10px
 }
 .show-box .sectionTitle h3{
-  font-family: 'Mollie glaston';
+	font-family: Manrope;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -229,6 +229,25 @@
     display: none;
   }
 
+  .sectionTitle h3 {
+    padding: 0 10px;
+    font-size: 30px;
+  }
+
+  .sectionTitle h5 {
+    padding: 0 15px;
+  } 
+
+  .show-box .sectionTitle h3{
+    padding: 0 20px;
+  }
+
+  .product-name, .product-name div{
+    font-size: 20px;
+  }
+  .product-price{
+    font-size: 18px;
+  }
 }
 @media screen and (max-width: 900px) {
   a.mobile-menubar {

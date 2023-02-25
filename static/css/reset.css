@@ -211,3 +211,30 @@
 #sortSelect, .current{
   font-size: 20 !important;
 }
+
+
+
+/* 移动端设置 */
+@media screen and (max-width: 600px) {
+  #featureProducts .product {
+    margin-bottom: 10px;
+  }
+  .contentRowPad .img-responsive{
+    margin-bottom: 10px;
+  }
+  .footer-widget{
+    padding-bottom: 15px
+  }
+
+
+}
+@media screen and (max-width: 900px) {
+  .subscriber-area{
+    margin-top: 30px;
+  }
+  .header a.mobile-menubar{
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
+}

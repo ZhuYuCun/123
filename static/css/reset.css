@@ -225,16 +225,40 @@
   .footer-widget{
     padding-bottom: 15px
   }
-
+  .mobile-none{
+    display: none;
+  }
 
 }
 @media screen and (max-width: 900px) {
+  a.mobile-menubar {
+    color: #fff;
+    font-size: 22px;
+    background: url(/images/icon/menu.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   .subscriber-area{
     margin-top: 30px;
   }
   .header a.mobile-menubar{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: block;
+  }
+  .img-responsive{
+    margin-bottom: 100px;
+  }
+  .mobil-mune{
+    font-size: 20px;
+    color: #000000;
+    font-style: italic;
+  }
+  .submit-mobile{
+    max-width: 90vw;
+  }
+  .footer-widget .btn{
+    padding: 16px 22px;
+    border-radius: 0 3px 3px 0;
   }
 }

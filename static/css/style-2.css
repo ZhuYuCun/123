@@ -102,13 +102,13 @@ a:focus {
 }
 
 ::selection {
-    color: #fff;
-    background-color: #fd405e
+    color: #000;
+    background-color: #ECECEC
 }
 
 ::-moz-selection {
-    color: #fff;
-    background-color: #fd405e
+    color: #000;
+    background-color: #ECECEC
 }
 
 section.row,

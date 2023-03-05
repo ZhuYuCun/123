@@ -238,44 +238,44 @@
 
   //Sale-product-active
   //---------------------------------------------------------------------------
-  setTimeout(() => {
-    $('.Sale-Products-active').slick({
-      dots: false,
-      arrows: false,
-      infinite: true,
-      speed: 300,
-      autoplay: false,
-      autoplaySpeed: 2000,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 3,
-          },
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 550,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-      ],
-    });
-  }, 300);
+  // setTimeout(() => {
+  //   $('.Sale-Products-active').slick({
+  //     dots: false,
+  //     arrows: false,
+  //     infinite: true,
+  //     speed: 300,
+  //     autoplay: false,
+  //     autoplaySpeed: 2000,
+  //     slidesToShow: 4,
+  //     slidesToScroll: 1,
+  //     responsive: [
+  //       {
+  //         breakpoint: 1200,
+  //         settings: {
+  //           slidesToShow: 3,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 767,
+  //         settings: {
+  //           slidesToShow: 2,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 600,
+  //         settings: {
+  //           slidesToShow: 2,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 550,
+  //         settings: {
+  //           slidesToShow: 1,
+  //         },
+  //       },
+  //     ],
+  //   });
+  // }, 300);
 
   //Sale-product-active
   //---------------------------------------------------------------------------

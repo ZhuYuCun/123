@@ -68,6 +68,7 @@
               let type = `<input type="text" onblur="updateInfo(${element.id}, 'type', this)" value="${element.type || ''}">`;
 
               let classify = `<select name="classify" style="height: 2.5em;" onchange="updateInfo(${element.id},'classify', this)">
+                            <option value="enamet" ${element.classify === 'enamet' ? 'selected' : ''}>珐琅彩</option>
                             <option value="ring" ${element.classify === 'ring' ? 'selected' : ''}>戒指</option>
                             <option value="earring" ${element.classify === 'earring' ? 'selected' : ''}>耳环</option>
                             <option value="necklace" ${element.classify === 'necklace' ? 'selected' : ''}>项链</option>

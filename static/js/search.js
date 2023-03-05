@@ -1,4 +1,5 @@
 let query = {};
+let current = null;
 $(function () {
   let locationSearch = location.search.replace('?', '');
   if (locationSearch && locationSearch.indexOf('=') != -1) {
@@ -10,6 +11,7 @@ $(function () {
   $('#mobile-menu a')
     .mouseover(function () {
       $('#mobile-menu').find('a').removeClass('active');
+      $('.nice-select').removeClass('open');
     })
     .mouseleave(function () {
       if (location.pathname === '/index.html' || location.pathname === '/') {
@@ -78,21 +80,22 @@ function search() {
       }
 
       if (pathName.indexOf('detail') != -1) {
-        detailRecmmodRender(resData.data);
         var id = location.search.split('=')[1];
-        if (id) detailRender(location.search.split('=')[1]);
+        if (id) detailRender(location.search.split('=')[1], resData.data);
+        // 详情页推荐;
       }
     },
   });
 }
 // 详情页渲染
-function detailRender(id) {
+function detailRender(id, allData) {
   $.ajax({
     url: `/product?id=${id}`,
     type: 'GET',
     success: function (data) {
       console.log('data', data);
       let id = data.id;
+      current = data;
 
       $('#titleBrand').text(data.title);
       $('#productTitle').text(data.title);
@@ -144,6 +147,8 @@ function detailRender(id) {
           </div>
         </div>
       `);
+
+      detailRecmmodRender(allData);
     },
   });
 }
@@ -233,8 +238,6 @@ function indexRender(data) {
 
 // 详情页推荐 page
 function detailRecmmodRender(data) {
-  console.log('render detail page', recmmodlist);
-
   var getRandomArrayElements = function (arr, count) {
     let newArr = arr.slice(0);
     let i = arr.length;
@@ -250,11 +253,14 @@ function detailRecmmodRender(data) {
     return newArr.slice(min);
   };
 
-  var recmmodlist = getRandomArrayElements(data, 10);
+  var classifyData = data.filter((item) => item.classify == current.classify);
 
-  console.log('recmmodlist', recmmodlist);
+  console.log('classifyData', classifyData);
+  var recmmodlist = getRandomArrayElements(classifyData, 10);
 
   recmmodlist.forEach((item) => {
+    console.log('item:', item);
+    if (!item) return;
     // 渲染推荐
     var model = `
         <div class="row pl-10 pr-10 pt-25">
@@ -272,6 +278,43 @@ function detailRecmmodRender(data) {
         </div>
       `;
     $('#related').append(model);
+  });
+
+  $('.Sale-Products-active').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 }
 

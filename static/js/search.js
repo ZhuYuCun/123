@@ -116,8 +116,8 @@ function detailRender(id, allData) {
       $('#v-pills-tabContent1').append(`
         <div class="tab-pane fade show active" id="v-pills-home1" role="tabpanel" aria-labelledby="v-pills-home-tab1">
           <div class="product-gallery-btn position-absolute right-site mr-4">
-            <a href="images/product/${data.cover}" class="zoom-gallery dark-black-color bg-white d-block m-2" data-fancybox="images"
-              ><i class="fas fa-compress"></i><img class="d-none width100" src="images/product/${data.cover}" alt=""
+            <a href="images/product/${data.cover}" class="zoom-gallery dark-black-color d-block m-2" data-fancybox="images"
+              ><img class="d-none width100" src="images/product/${data.cover}" alt=""
             /></a>
           </div>
           <div class="product-img">
@@ -127,8 +127,8 @@ function detailRender(id, allData) {
         
         <div class="tab-pane fade" id="v-pills-profile1" role="tabpanel" aria-labelledby="v-pills-profile-tab1">
           <div class="product-gallery-btn position-absolute right-site mr-4">
-            <a href="images/product/${id}-2.JPG" class="zoom-gallery dark-black-color bg-white d-block m-2" data-fancybox="images"
-              ><i class="fas fa-compress"></i><img class="d-none width100" src="images/product/${id}-2.JPG" alt=""
+            <a href="images/product/${id}-2.JPG" class="zoom-gallery dark-black-color d-block m-2" data-fancybox="images"
+              ><img class="d-none width100" src="images/product/${id}-2.JPG" alt=""
             /></a>
           </div>
           <div class="product-img">
@@ -138,8 +138,8 @@ function detailRender(id, allData) {
 
         <div class="tab-pane fade" id="v-pills-messages1" role="tabpanel" aria-labelledby="v-pills-messages-tab1">
           <div class="product-gallery-btn position-absolute right-site mr-4">
-            <a href="images/product/${id}-3.JPG" class="zoom-gallery dark-black-color bg-white d-block m-2" data-fancybox="images"
-              ><i class="fas fa-compress"></i><img class="width100 d-none" src="images/product/${id}-3.JPG" alt=""
+            <a href="images/product/${id}-3.JPG" class="zoom-gallery dark-black-color d-block m-2" data-fancybox="images"
+              ><img class="width100 d-none" src="images/product/${id}-3.JPG" alt=""
             /></a>
           </div>
           <div class="product-img">

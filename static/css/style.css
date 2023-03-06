@@ -1323,9 +1323,13 @@ a.mobile-menubar {
   right: 0;
 }
 .product-gallery-btn a {
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   border-radius: 100px;
+  height: 60px;
+  width: 60px;
   padding: 10px 15px;
+  background-image: url(/static/picture/full-normal.png);
+  background-size: cover;
+  background-position: center;
 }
 .product-gallery-btn {
   left: 0;
@@ -1342,7 +1346,9 @@ a.mobile-menubar {
   top: 0;
 }
 .product-gallery-btn a:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-image: url(/static/picture/full-hover.png);
+  background-size: cover;
+  background-position: center;
 }
 
 /* 14. cart page area

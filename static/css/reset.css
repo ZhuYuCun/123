@@ -312,10 +312,10 @@
   text-transform: uppercase;
   color: #333333;
 }
-.col{
+.col-form{
   margin-bottom: 50px;
 }
-.col input{
+.col-form input{
   width: 100%;
   border: 0.5px solid #333333;
   height: 54px;
@@ -324,18 +324,18 @@
   font-size: 16px;
   font-family: 'Manrope';
 }
-.col input:focus{
+.col-form input:focus{
   outline-style: none; 
   border: 1px solid #333333;
 }
-.col textarea{
+.col-form textarea{
   width: 100%;
   border: 0.5px solid #333333;
   color: #333333;
   font-family: 'Manrope';
   font-size: 16px;
 }
-.col textarea:focus{
+.col-form textarea:focus{
   outline-style: none; 
   border: 1px solid #333333;
 }
@@ -376,4 +376,9 @@
   border: 0.5px solid #FA3A3A!important;
   border-right: none;
   color: #FA3A3A!important;
+}
+
+
+@media screen and (max-width: 600px) {
+
 }

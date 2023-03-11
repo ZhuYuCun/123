@@ -494,7 +494,7 @@ a:hover,
 	box-shadow: 0 8px 4px -7px rgba(115,115,115,0.1); */
 }
 #sortId {
-  padding-right: 26px;
+  /* padding-right: 26px; */
 }
 .header-area.sticky-menu,
 .header:hover {
@@ -532,7 +532,7 @@ a:hover,
 
 .main-menu ul li {
   display: inline-block;
-  margin: 0 22px;
+  margin-right: 25px;
   position: relative;
 }
 .main-menu ul li > a {

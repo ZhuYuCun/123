@@ -20,6 +20,9 @@ $(function () {
       if (location.pathname === '/sort.html') {
         $('#mobile-menu').find('a').eq(1).addClass('active');
       }
+      if (location.pathname === '/contactus.html') {
+        $('#contact').addClass('active');
+      }
     });
   $('#sortId')
     .mouseover(function () {
@@ -37,9 +40,9 @@ $(function () {
     search();
   });
 
-  // $('.carousel').carousel({
-  //   interval: 10000,
-  // });
+  $('input').on('input', function () {
+    $(this).removeClass('error');
+  });
 });
 
 // search
@@ -48,17 +51,39 @@ $('.header-search-details ul li').click(function () {
   $(this).siblings().find('a').removeClass('active');
 });
 
-// submit email
+// 底部加盟输入框 email
 layui.use('layer', function () {
   var $ = layui.jquery,
     layer = layui.layer;
 
-  $('#submit').on('click', function () {
-    layer.open({
-      title: 'SUBMITTED SUCCESSEULLY',
-      area: ['390px', '160px'],
-      content: '<div>THANK YOU FOR YOUR TRUST, WE WILL CONTACT YOUAS SOONAS POSSIBLE</div>',
-      btn: null,
+  $('#submit').on('click', function (val) {
+    console.log('val', $('#email').val());
+    let email = $('#email').val();
+    let pattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+    if (!pattern.test(email)) {
+      $('#email').addClass('error');
+      return;
+    }
+
+    $.ajax({
+      url: `/email/add`,
+      type: 'post',
+      data: { email: email },
+      dataType: 'JSON',
+      success: function (res) {
+        $('#email').val('');
+        layer.open({
+          title: 'SUBMITTED SUCCESSEULLY',
+          area: ['390px', '160px'],
+          content: '<div>THANK YOU FOR YOUR TRUST, WE WILL CONTACT YOUAS SOONAS POSSIBLE</div>',
+          btn: null,
+        });
+      },
+      error: function (e) {
+        console.log('error', e);
+        $('#email').addClass('error');
+      },
     });
   });
 });
@@ -347,3 +372,45 @@ function queryData(data, query) {
 
   return resData;
 }
+
+// 点击发送信息 联系我们页面
+$('#send').click(function () {
+  let email = $('#email1').val();
+  let pattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+  if (!pattern.test(email)) {
+    $('#email1').addClass('error');
+    return;
+  }
+
+  $.ajax({
+    url: `/contact/add`,
+    type: 'post',
+    data: {
+      email: email,
+      name: $('#name').val(),
+      phone: $('#phone').val(),
+      where: $('#where').val(),
+      message: $('#message').val(),
+    },
+    dataType: 'JSON',
+    success: function (res) {
+      layer.open({
+        title: 'SUBMITTED SUCCESSEULLY',
+        area: ['390px', '160px'],
+        content: '<div>THANK YOU FOR YOUR TRUST, WE WILL CONTACT YOUAS SOONAS POSSIBLE</div>',
+        btn: null,
+      });
+
+      $('#email1').val('');
+      $('#name').val('');
+      $('#phone').val('');
+      $('#where').val('');
+      $('#message').val('');
+    },
+    error: function (e) {
+      console.log('error', e);
+      $('#email1').addClass('error');
+    },
+  });
+});

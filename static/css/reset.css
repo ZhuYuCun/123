@@ -1,6 +1,18 @@
 .shopFeatures_new, .p-page-area{
   margin-top: 100px;
 }
+.contant-page{
+  margin-top: 160px;
+  margin-bottom: 60px;
+  font-family: 'Amiri';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #333333;
+  opacity: 0.8;
+}
 
 .header-right{
   justify-content: flex-end !important;
@@ -287,4 +299,81 @@
     padding: 16px 22px;
     border-radius: 0 3px 3px 0;
   }
+}
+
+.label{
+  margin-bottom: 12px;
+  height: 22px;
+  font-family: 'Amiri';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #333333;
+}
+.col{
+  margin-bottom: 50px;
+}
+.col input{
+  width: 100%;
+  border: 0.5px solid #333333;
+  height: 54px;
+  color: #333333;
+  font-family: 'Manrope';
+  font-size: 16px;
+  font-family: 'Manrope';
+}
+.col input:focus{
+  outline-style: none; 
+  border: 1px solid #333333;
+}
+.col textarea{
+  width: 100%;
+  border: 0.5px solid #333333;
+  color: #333333;
+  font-family: 'Manrope';
+  font-size: 16px;
+}
+.col textarea:focus{
+  outline-style: none; 
+  border: 1px solid #333333;
+}
+.send{
+  background: #333333;
+  width: 124px;
+  height: 54px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+#submit{
+  background: #333333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 9;
+  font-size: 16px;
+  font-family: 'Manrope';
+}
+.send:hover, #submit:hover{
+  background: #C6AD89;
+  border-color: #C6AD89;
+}
+.send:active, #submit:active{
+  background: #977849;
+}
+.error{
+  outline-style: none; 
+  background: rgba(250, 58, 58, 0.1);
+  opacity: 0.6;
+  border: 0.5px solid #FA3A3A!important;
+  border-right: none;
+  color: #FA3A3A!important;
 }

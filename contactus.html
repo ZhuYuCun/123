@@ -26,7 +26,6 @@
     <!--[if lte IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
-
     <!--  ====== header-area-start=======================================  -->
     <header>
       <div id="header-sticky" class="header-area sticky-menu">
@@ -46,8 +45,17 @@
                   <nav id="mobile-menu">
                     <ul>
                       <li><a href="index.html">HOME</a></li>
-                      <li><a href="sort.html">SORT</a></li>
-                      <!-- <li><a href="contactus.html" class="active">CONTACTUS</a></li> -->
+                      <li id="sortId">
+                        <a href="sort.html">SORT</a>
+                        <div class="sort-child">
+                          <a href="/sort.html?type=enamet">ENAMET</a>
+                          <a href="/sort.html?type=ring">RINGFINGER</a>
+                          <a href="/sort.html?type=earring">EARRING</a>
+                          <a href="/sort.html?type=necklace">NECKLACE</a>
+                          <a href="/sort.html?type=bracelet">BRACELET</a>
+                        </div>
+                      </li>
+                      <li><a href="contactus.html" id="contact" class="active">CONTACT US</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -67,7 +75,37 @@
     </header>
     <!--  header-area-end  -->
 
-    <div class="p-page-area" style="min-height: 400px"></div>
+    <div class="container">
+      <div class="contant-page">THANK YOU FOR YOUR CONTACT, WE WILL REPLY YOU AS SOON</div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col">
+          <div class="label">NAME</div>
+          <input type="text" id="name" />
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col">
+          <div class="label">EMAIL</div>
+          <input type="text" id="email1" />
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col">
+          <div class="label">PHONE NUMBER</div>
+          <input type="text" id="phone" />
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col">
+          <div class="label">WHERE DID YOU KNOW US</div>
+          <input type="text" id="where" />
+        </div>
+
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col">
+          <div class="label">MESSAGE</div>
+          <textarea rows="6" id="message"></textarea>
+        </div>
+
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col">
+          <div class="send" id="send">SEND</div>
+        </div>
+      </div>
+    </div>
 
     <!-- ====== footer-area-start ============================================ -->
     <footer>
@@ -78,7 +116,7 @@
               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="footer-widget pb-30">
                   <h4 class="text-uppercase text-black italic">BECOME A DEALER</h4>
-                  <div action="#" class="d-flex justify-content-left submit-mobile">
+                  <div class="d-flex justify-content-left submit-mobile">
                     <input type="text" name="email" id="email" placeholder="Your Email" />
                     <button class="btn pl-30 border-black ml-2" id="submit">SUBMIT</button>
                   </div>
@@ -88,7 +126,6 @@
                   <a href=""> </a>
                   <a href=""> </a>
                 </div>
-              </div>
               </div>
               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="footer-widget subscriber-area pb-30 pl-100">
@@ -108,7 +145,6 @@
         </div>
       </div>
     </footer>
-
     <!-- back top -->
     <div class="position-relative">
       <div class="top text-center border-gray2">
@@ -132,5 +168,6 @@
     <script src="static/js/jquery.meanmenu.min.js"></script>
     <script src="static/js/main.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/layui/2.7.6/layui.min.js"></script>
+    <script src="static/js/search.js"></script>
   </body>
 </html>

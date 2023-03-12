@@ -2333,3 +2333,8 @@ input {
 input.none {
   outline: none;
 }
+
+.product-img video{
+  width: 100%;
+  max-height: 100%;
+}

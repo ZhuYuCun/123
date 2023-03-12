@@ -126,8 +126,20 @@ function detailRender(id, allData) {
       $('#productTitle').text(data.title);
       $('#introduct').text(data.describe);
 
+      let videoDom = `<div class="tab-pane fade show active" id="video" role="tabpanel" aria-labelledby="video-tab1">
+        <div class="product-img">
+          <video autoplay="true" muted>
+            <source src="./video/${data.video}" type="video/mp4" />
+          </video>
+        </div>
+      </div>`;
+
+      if (!data.video) {
+        videoDom = '';
+      }
+
       $('#v-pills-tab1').append(`
-        <a class="nav-link show active" id="v-pills-home-tab1" data-toggle="pill" href="#v-pills-home1" role="tab" aria-controls="v-pills-home1" aria-selected="true">
+        <a class="nav-link ${!videoDom ? 'active' : ''}" id="v-pills-home-tab1" data-toggle="pill" href="#v-pills-home1" role="tab" aria-controls="v-pills-home1" aria-selected="false">
           <img class="product-thumbnail" src="images/product/${data.cover}" alt="" />
         </a>
         <a class="nav-link" id="v-pills-profile-tab1" data-toggle="pill" href="#v-pills-profile1" role="tab" aria-controls="v-pills-profile1" aria-selected="false">
@@ -139,7 +151,9 @@ function detailRender(id, allData) {
         `);
 
       $('#v-pills-tabContent1').append(`
-        <div class="tab-pane fade show active" id="v-pills-home1" role="tabpanel" aria-labelledby="v-pills-home-tab1">
+        ${videoDom}
+
+        <div class="tab-pane fade ${!videoDom ? 'show active' : ''}" id="v-pills-home1" role="tabpanel" aria-labelledby="v-pills-home-tab1">
           <div class="product-gallery-btn position-absolute right-site mr-4">
             <a href="images/product/${data.cover}" class="zoom-gallery dark-black-color d-block m-2" data-fancybox="images"
               ><img class="d-none width100" src="images/product/${data.cover}" alt=""

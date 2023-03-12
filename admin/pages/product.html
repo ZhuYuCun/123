@@ -47,6 +47,38 @@
         border-radius: 5px;
         padding: 20px;
       }
+
+      .el-upload {
+        width: 78px;
+        height: 78px;
+        display: block;
+        border: 1px dashed #d9d9d9;
+        border-radius: 6px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+      .el-upload:hover {
+        border-color: #409eff;
+      }
+      .el-upload input {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        position: absolute;
+        left: 0;
+        top: 0;
+        cursor: pointer;
+      }
+      .el-upload video {
+        width: 78px;
+        height: 78px;
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
     </style>
   </head>
 
@@ -116,6 +148,7 @@
                 <th>封面图</th>
                 <th>流行度</th>
                 <th>时间排序</th>
+                <th>视频</th>
               </tr>
             </thead>
             <tbody id="tbody" class="pure-form pure-form-stacked"></tbody>
@@ -194,9 +227,18 @@
                       <td onclick='addOrUpdateCover(${element.id})'>${element.cover === 'undefined' || !element.cover ? 'empty' : img}</td>
                       <td>${popular}</td>
                       <td>${createTime}</td>
+                      <td>
+                        <div class="el-upload">
+                          <input type="file" id="file${element.id}" name="file">
+                          <video autoplay="true" muted>
+                            <source src="../../video/${element.video}" type="video/mp4" />
+                          </video>
+                        </div>
+                      </td>
                     </tr>`;
-              // <td>${element.recommendIndex || ''}</td>
-              // <td>${element.describe || ''}</td>
+              setTimeout(() => {
+                fileUploadInit(element.id);
+              }, 2000);
             });
             $('#tbody').append($(str));
           },
@@ -245,6 +287,31 @@
           error: function (e) {
             console.log('error', e);
           },
+        });
+      }
+    </script>
+
+    <script>
+      function fileUploadInit(id) {
+        $('#file' + id).change(function (event) {
+          let file = event.target.files[0] || event.dataTransfer.files[0];
+          var data = new FormData();
+          data.append('file', file);
+
+          $.ajax({
+            url: `/product/video/${id}`,
+            type: 'POST',
+            data: data,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function () {
+              initData();
+            },
+            error: function () {
+              alert('error');
+            },
+          });
         });
       }
     </script>
